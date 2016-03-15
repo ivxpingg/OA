@@ -1,0 +1,28 @@
+{
+  "name": "oa",
+  "description": "长潮APP-OA",
+  "main": "index.js",
+  "authors": [
+    "ivxpingg"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "SUI-Mobile": "https://github.com/sdc-alibaba/SUI-Mobile.git"
+  }
+}
