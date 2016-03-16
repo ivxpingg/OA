@@ -5,31 +5,52 @@ module.exports = function(grunt){
      grunt.initConfig({
      	watch: {
      		files: [
-             
+                   'build/scss/*.scss',
+                   'build/scss/base/*.scss',
+                   'build/scss/helpers/*scss',
+                   'build/scss/pages/*.scss'
      		],
-     		tasks: ["sass:production"]
+     		tasks: ['sass:production', 'autoprefixer']
      	},
 
      	//Sass 编译
      	sass: {     	 
-     		development: {},
+     		development: {
+                    options: {
+                         style: 'expanded'    //不压缩
+                    }
+               },
      		production: {
      			options: {
-     				style: 'compressed'
+     				style: 'compressed'  //压缩
      			},
-     			files: [
-                    {}
-     			]
+     			files: {
+                        'dist/css/oa.css': 'build/scss/oa.scss',
+                        'dist/css/login.css': 'build/scss/pages/login.scss'
+     			}
      		}
      	},
+ 
+
+          autoprefixer: {
+               dist: {
+                    files: {
+                        'dist/css/oa.css': 'dist/css/oa.css',
+                        'dist/css/login.css': 'dist/css/login.css'
+                    }
+               }
+          }
+
 
 
      });
 
-     grunt.LoadNpmTasks('grunt-contrib-sass');
-     grunt.LoadNpmTasks('grunt-contrib-watch');
-     grunt.LoadNpmTasks('grunt-contrib-clean');
+     grunt.loadNpmTasks('grunt-contrib-sass');
+     grunt.loadNpmTasks('grunt-contrib-watch');
+     grunt.loadNpmTasks('grunt-contrib-clean');
+     grunt.loadNpmTasks('grunt-autoprefixer');    //自动为 某些 CSS 属性添加针对特定厂商的前缀
 
 
-     grunt.registerTask('default',['watch']);
+     grunt.registerTask('default', ['watch']);
+     grunt.registerTask('com', ['sass:production','autoprefixer']);
 };

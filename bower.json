@@ -23,6 +23,8 @@
   ],
   "dependencies": {
     "jquery": "^2.2.1",
-    "SUI-Mobile": "https://github.com/sdc-alibaba/SUI-Mobile.git"
+    "SUI-Mobile": "https://github.com/sdc-alibaba/SUI-Mobile.git",
+    "font-awesome": "^4.5.0",
+    "fullcalendar": "^2.6.1"
   }
 }

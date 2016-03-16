@@ -1,0 +1,52 @@
+@import '../common/_common';
+
+
+
+
+.content-padded{
+	margin: 0 2.25rem;
+
+}
+
+.logo-lg{
+	display: block;
+	width: 8.3rem;
+	margin: 3.7rem auto 0;
+}
+
+
+.form-lg{
+	> ul:before,ul:after{
+		display: none;
+		content: none;
+	}
+
+	>ul li{
+		margin-top: .5rem;
+	}
+
+	.item-content:after{
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    right: auto;
+	    top: auto;
+	    height: 1px;
+	    width: 100%;
+	    background-color: color(cyan);
+	    display: block;
+	    z-index: 15;
+	    -webkit-transform-origin: 50% 100%;
+	    transform-origin: 50% 100%;
+
+	    > .item-inner:after{
+            display: none;
+		    content: none;
+	    }
+	}
+
+
+
+}
+

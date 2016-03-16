@@ -1,0 +1,62 @@
+
+
+//1. 设置 默认字体为微软雅黑
+//2. 防止IOS和IE在屏幕设备方向改变字体大小也随着改变, 不会禁用用户缩放
+//3. 设置盒子模型
+html{
+	@include font(msyahei);
+	text-size-adjust: 100%; //
+	box-sizing: border-box;
+	font-size: 20px;
+}
+
+body{
+    margin: 0;    
+    @include font(msyahei);
+    font-size: 20px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+
+// Links
+// ==========================================================================
+
+//
+// Remove the gray background color from active links in IE 10.
+//
+
+a {
+  background-color: transparent;
+}
+
+//
+// Improve readability of focused elements when they are also in an
+// active/hover state.
+//
+
+a {
+  &:active {
+    outline: 0;
+  }
+  &:hover {
+    outline: 0;
+  }
+}
+

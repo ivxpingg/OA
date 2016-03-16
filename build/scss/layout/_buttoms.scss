@@ -1,0 +1,13 @@
+
+
+.btn-cyan{
+	background: color(cyan);
+	border-color: color(cyan);
+	color: #fff;
+
+	&:hover,&:focus{
+		color:#fff;
+		background: darken(color(cyan), 5%);
+		border-color: darken(color(cyan), 5%);
+	}
+}
