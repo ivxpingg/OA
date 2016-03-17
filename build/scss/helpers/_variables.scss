@@ -4,14 +4,15 @@
 //color
 $color-stack: 
     (group: gray,        id: normal,        color: #424446 ),  //字体  灰色
-    (group: gray,        id: gray-5,        color: #585858 ),  //字体    
-    (group: gray,        id: normal,        color: #606366 ),  //字体
-    (group: gray,        id: normal,        color: #777777 ),  //字体
-    (group: gray,        id: normal,        color: #888888 ),  //字体
-    (group: gray,        id: normal,        color: #898e91 ),  //字体    
-    (group: gray,        id: gray-border,   color: #d9d9d9 ),  //border
-    (group: gray,        id: gray-border,   color: #e5e5e5 ),  //border
-    (group: gray,        id: gray-bg,       color: #efefef ),  //背景     
+    (group: gray,        id: gray-58,        color: #585858 ),  //字体    
+    (group: gray,        id: gray-60,        color: #606366 ),  //字体
+    (group: gray,        id: gray-77,        color: #777777 ),  //字体
+    (group: gray,        id: gray-88,        color: #888888 ),  //字体
+    (group: gray,        id: gray-89,        color: #898e91 ),  //字体    
+    (group: gray,        id: gray-d9,   color: #d9d9d9 ),  //border
+    (group: gray,        id: gray-e5,   color: #e5e5e5 ),  //border
+    (group: gray,        id: gray-bg,       color: #efefef ),  //背景  
+    (group: gray,        id: gray-bg-light,       color: #f7fdff ),  //背景     
       
     (group: blue,        id: normal,        color: #0067bf ),  //蓝色
     (group: blue,        id: blue-light,    color: #16a7e6 ),
@@ -27,7 +28,8 @@ $color-stack:
     (group: red,         id: red-lighter,   color: #f35050 ),
 
     (group: orange,      id: normal,        color: #feb100 ),  //橙色
-    (group: orange,      id: orange-red,    color: #ff8841 ),      
+    (group: orange,      id: orange-red,    color: #ff7c48 ),
+    (group: orange,      id: orange-red-light,    color: #ff8841 ),      
 
     (group: yellow,      id: normal,        color: #fca54b ),  //黄色   
 
@@ -43,3 +45,8 @@ $color-stack:
  $font-stack:
      (group: msyahei,        id: normal,        font:('Microsoft YaHei',san-serif),        weight: 500,        style: normal),
      (group: msyahei,        id: bold,          font:('Microsoft YaHei',san-serif),        weight: 700,        style: normal);
+
+
+//基元素字体 $calculate-font-size与$base-font-size 变量必须相等
+$calculate-font-size: 20;
+$base-font-size: 20px;

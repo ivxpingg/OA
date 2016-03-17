@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!---->
+<html land="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <!--确保-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">   
+	<title>长潮OA</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../dist/img/cc_ico.png" type="image/x-icon" />
+	<!-- sui-mobile -->
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../../dist/css/oa.css">
+    <link rel="stylesheet" href="../../dist/css/home/home.css">
+
+</head>
+<body>
+    <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <!-- 单个page ,第一个.page默认被展示-->
+        <div class="page page-current" id="">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <h1 class="title">长潮OA</h1>
+            </header>
+
+            <!-- 工具栏 -->
+            <nav class="bar bar-tab">
+                <a class="tab-item external  active" href="#">
+                    <span class="icon cc-icon cc-home"></span>
+                    <span class="tab-label">个人应用</span>
+                </a>
+                <a class="tab-item external" href="mail.html">
+                    <span class="icon cc-icon cc-mail"></span>
+                    <span class="tab-label">写邮件</span>
+                </a>
+                <a class="tab-item external" href="userCenter.html">
+                    <span class="icon cc-icon cc-user-center"></span>
+                    <span class="tab-label">个人中心</span>
+                </a>
+            </nav>
+
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <!-- 用户信息资料和天气 -->
+                <div class="user-panel">
+                    <div class="head-img"><img src="../../dist/img/user-img.png" alt=""></div>
+                    <div class="user-data">
+                        <div class="name">林诗雨</div>
+                        <div class="email">lsy@fjcckj.com</div>
+                        <div class="other">部门:<span class="value">软件部</span>&nbsp;&nbsp;&nbsp;&nbsp;职务:<span class="value">工程师</span></div>
+                    </div>
+                    <div class="weather">
+                        <span class="img pull-left"><img src="../../dist/img/weather-cloudy.png" alt=""></span>
+                        <span class="msg pull-left">多云</span>
+                    </div>
+                </div>
+                                   
+                    
+                <!-- 邮件信息、消息、通知 -->
+                <div class="news-notice">
+                    <div class="row no-gutter">
+                        <div class="col-25">
+                            <a class="btn btn-app btn-app-adap fist-child" href="#">
+                                <span class="badge bg-red">12</span>
+                                <span class="icon ic-unread-email">
+                                    <img src="../../dist/img/mail.png" alt="">
+                                </span>
+                                未读邮件
+                            </a>
+                        </div>
+                        <div class="col-25">
+                            <a class="btn btn-app btn-app-adap" href="#">
+                                <span class="badge bg-red">3</span>
+                                <span class="icon ic-read-email">
+                                    <img src="../../dist/img/read-mail.png" alt="">
+                                </span>
+                                已读邮件
+                            </a>
+                        </div>
+                        <div class="col-25">
+                            <a class="btn btn-app btn-app-adap" href="#">
+                                <span class="badge bg-red"></span>
+                                <span class="icon ic-sented-email">
+                                    <img src="../../dist/img/mail-ed.png" alt="">
+                                </span>
+                                已发邮件
+                            </a>
+                        </div>
+                        <div class="col-25">
+                            <a class="btn btn-app btn-app-adap" href="#">
+                                <span class="badge bg-red"></span>
+                                <span class="icon ic-notice">
+                                    <img src="../../dist/img/notice.png" alt="">
+                                </span>
+                                通知公告
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 模块列表 -->
+                <ul class="module-list clearfix">
+                    <li>
+                        <a href="#">
+                            <img src="../../dist/img/list-adopt.png" alt="">
+                            流程审批
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../dist/img/list-user-list.png" alt="">
+                            通讯录
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../dist/img/list-check.png" alt="">
+                            考勤管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../dist/img/list-work-plan.png" alt="">
+                            工作计划
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../dist/img/list-add.png" alt="">
+                            添加更多
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- popup, panel 等放在这里 -->
+    <div class="panel-overlay"></div>
+   
+
+
+    
+    <script type='text/javascript' src='../../bower_components/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+
+    <script type='text/javascript' src='../../dist/js/home/home.js'></script>
+</body>
+</html>

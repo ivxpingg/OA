@@ -11,3 +11,55 @@
 		border-color: darken(color(cyan), 5%);
 	}
 }
+
+.btn-link{
+	display: inline-block;
+	padding: .2rem .3rem;
+	font-size: .6rem;
+    line-height: 1rem;    
+    color: color(gray);
+}
+
+//#region
+// 图文按钮
+.btn-app{
+	position: relative;
+	display: block;
+	padding: rem(11) 0;
+    background-color: #fff;
+    width: 100%; 
+    height: auto;
+    font-size: rem(14);
+    text-align: center;
+    color: color(gray, gray-89);
+    border: 1px solid color(gray, gray-e5);
+    > .badge{
+    	position: absolute;
+        top: rem(15);
+        left: 58%;
+    	z-index: 1;
+    }
+
+    > .icon{
+    	display: block;
+    	margin: 0 auto;
+    	padding-top: rem(12);
+    	width: 40%;
+    	background-repeat: no-repeat;
+        
+    	> img{
+    		width: 100%;
+    	}
+    }
+
+}
+
+//按钮自适应
+.btn-app-adap{
+
+
+
+}
+
+
+//#endrgion

@@ -8,7 +8,9 @@ module.exports = function(grunt){
                    'build/scss/*.scss',
                    'build/scss/base/*.scss',
                    'build/scss/helpers/*scss',
-                   'build/scss/pages/*.scss'
+                   'build/scss/layout/*scss',
+                   'build/scss/pages/*.scss',
+                   'build/scss/pages/home/*.scss'
      		],
      		tasks: ['sass:production', 'autoprefixer']
      	},
@@ -26,7 +28,8 @@ module.exports = function(grunt){
      			},
      			files: {
                         'dist/css/oa.css': 'build/scss/oa.scss',
-                        'dist/css/login.css': 'build/scss/pages/login.scss'
+                        'dist/css/login.css': 'build/scss/pages/login.scss',
+                        'dist/css/home/home.css': 'build/scss/pages/home/home.scss'
      			}
      		}
      	},
@@ -36,7 +39,8 @@ module.exports = function(grunt){
                dist: {
                     files: {
                         'dist/css/oa.css': 'dist/css/oa.css',
-                        'dist/css/login.css': 'dist/css/login.css'
+                        'dist/css/login.css': 'dist/css/login.css',
+                        'dist/css/home/home.css': 'dist/css/home/home.css'
                     }
                }
           }

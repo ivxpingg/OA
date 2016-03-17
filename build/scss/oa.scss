@@ -12,9 +12,12 @@
 @import 'helpers/_function';
 
 //layout
+@import 'layout/_utilities';
 @import 'layout/_buttoms';
 @import 'layout/_form';
 
+@import 'layout/_bars';
+@import 'layout/_base';
 //base
 @import 'base/_normalize';
 

@@ -1,0 +1,61 @@
+
+
+.bar-nav{
+	background-color: color(cyan);
+
+	&:after{
+		background-color: color(cyan);
+	}
+
+	> .title{
+		color: #fff;
+	}
+}
+
+
+.bar-tab{
+	background-color: color(gray, gray-bg);
+    
+
+    .tab-item{
+
+	    .cc-icon{
+	        width: 1.15rem;
+			height: 1.15rem;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+	    }
+
+		.cc-home{
+			background-image: url(../img/menu-app-0.png);
+		}
+
+		.cc-mail{
+			background-image: url(../img/menu-email-0.png);		
+		}
+
+		.cc-user-center{
+			background-image: url(../img/menu-user-0.png);
+		}
+
+		.tab-label{
+			color: color(gray,gray-88);
+		}
+
+		&.active{
+			.cc-home{
+				background-image: url(../img/menu-app-1.png);
+			}
+
+			.cc-mail{
+				background-image: url(../img/menu-email-1.png);
+			}
+
+			.cc-user-center{
+				background-image: url(../img/menu-user-1.png);		
+			}
+		}
+
+	}
+}
