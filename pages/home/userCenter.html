@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
     <link rel="stylesheet" href="../../dist/css/oa.css">
-    <link rel="stylesheet" href="../../dist/css/home/home.css">
+    <link rel="stylesheet" href="../../dist/css/home/userCenter.css">
 
 </head>
 <body>
@@ -44,7 +44,57 @@
 
             <!-- 这里是页面内容区 -->
             <div class="content">
-                <div class="content-block">这里是个人中心</div>
+                <!-- 用户信息资料和天气 -->
+                <div class="user-panel user-panel-border-b">
+                    <div class="head-img head-img-center">
+                        <img src="../../dist/img/user-img.png" alt="">
+                        <div class="name">林诗雨</div>
+                    </div>                    
+                </div>
+                
+                <!-- 用户信息 -->
+                <ul class="cc-list cc-list-border">
+                    <li>
+                        <div class="cc-box">
+                            <img class="img" src="../../dist/img/uc-1.png" alt="">
+                            <span class="value">主岗部门</span>
+                            <span class="value pull-right">软件部</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cc-box">
+                            <img class="img" src="../../dist/img/uc-2.png" alt="">
+                            <span class="value">办公电话</span>
+                            <span class="value pull-right">201245587</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cc-box">
+                            <img class="img" src="../../dist/img/uc-3.png" alt="">
+                            <span class="value">移动电话</span>
+                            <span class="value pull-right">13888888888</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cc-box">
+                            <img class="img" src="../../dist/img/uc-4.png" alt="">
+                            <span class="value">电子邮箱</span>
+                            <span class="value pull-right">fjcckj(myp)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <img class="img" src="../../dist/img/uc-5.png" alt="">
+                            <span class="value">修改密码</span>
+                            <span class="value pull-right"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="content-padded">
+                    <a href="#" class="button button-big btn-cyan" onclick="signOut();">注销</a>
+                </div>
+
             </div>
         </div>
         
@@ -60,6 +110,6 @@
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
 
-    <script type='text/javascript' src='../../dist/js/home/home.js'></script>
+    <script type='text/javascript' src='../../dist/js/home/userCenter.js'></script>
 </body>
 </html>

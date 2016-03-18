@@ -10,7 +10,8 @@ module.exports = function(grunt){
                    'build/scss/helpers/*scss',
                    'build/scss/layout/*scss',
                    'build/scss/pages/*.scss',
-                   'build/scss/pages/home/*.scss'
+                   'build/scss/pages/home/*.scss',
+                   'build/scss/pages/workPlan/*.scss'
      		],
      		tasks: ['sass:production', 'autoprefixer']
      	},
@@ -24,12 +25,14 @@ module.exports = function(grunt){
                },
      		production: {
      			options: {
-     				style: 'compressed'  //压缩
+     				style: 'expanded'//'compressed'  //压缩
      			},
      			files: {
                         'dist/css/oa.css': 'build/scss/oa.scss',
                         'dist/css/login.css': 'build/scss/pages/login.scss',
-                        'dist/css/home/home.css': 'build/scss/pages/home/home.scss'
+                        'dist/css/home/home.css': 'build/scss/pages/home/home.scss',
+                        'dist/css/home/userCenter.css': 'build/scss/pages/home/userCenter.scss',
+                        'dist/css/workPlan/workPlan.css': 'build/scss/pages/workPlan/workPlan.scss'
      			}
      		}
      	},
@@ -40,7 +43,9 @@ module.exports = function(grunt){
                     files: {
                         'dist/css/oa.css': 'dist/css/oa.css',
                         'dist/css/login.css': 'dist/css/login.css',
-                        'dist/css/home/home.css': 'dist/css/home/home.css'
+                        'dist/css/home/home.css': 'dist/css/home/home.css',
+                        'dist/css/home/userCenter.css': 'dist/css/home/userCenter.css',
+                        'dist/css/workPlan/workPlan.css': 'dist/css/workPlan/workPlan.css'
                     }
                }
           }

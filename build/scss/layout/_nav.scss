@@ -1,0 +1,63 @@
+// 导航
+
+.cc-nav{
+	margin: 0;
+	padding: 0;    
+	list-style-type: none;
+	@include clearfix();
+
+	> li{
+		float: left;
+		> a{
+			display: block;			
+			padding: rem(10) rem(14);
+			font-size: rem(15);
+			line-height: rem(15);
+			text-align: center;
+			color: color(gray);			
+		}
+
+	    
+	}
+}
+
+
+// 块状
+.cc-nav-pills{
+    > li > a{
+        border-top:1px solid color(gray,gray-d9);
+		border-right:1px solid color(gray,gray-d9);
+		border-bottom:1px solid color(gray,gray-d9);
+    }
+
+    > li:first-child > a{
+	    	border-left: 1px solid color(gray, gray-d9);
+	    	border-radius: rem(5) 0 0 rem(5);
+	    }
+
+	> li:last-child > a{            
+        border-radius: 0 rem(5) rem(5) 0;
+	}
+}
+
+
+//导航颜色
+.cc-nav-color-cyan{
+    > li > a{
+        color: color(cyan);
+        border-color: color(cyan);
+        background-color: #fff;
+    }
+
+    > li:first-child > a{
+        color: color(cyan);
+        border-color: color(cyan);
+        background-color: #fff;
+    }
+
+    > li.active > a{
+        color: #fff;
+        border-color: color(cyan);
+        background-color: color(cyan);
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!---->
+<html land="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <!--确保-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">   
+	<title>工作计划</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../dist/img/cc_ico.png" type="image/x-icon" />
+	<!-- sui-mobile -->
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../../dist/css/oa.css">
+    <link rel="stylesheet" href="../../dist/css/workPlan/workPlan.css">
+
+</head>
+<body>
+    
+    <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <!-- 单个page ,第一个.page默认被展示-->
+        <div class="page page-current" id="route1">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><</a>
+                <h1 class="title">工作计划</h1>
+            </header>
+
+            <!-- 工具栏 -->
+
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <!-- 导航栏 -->
+                <div class="nav-panel">
+                    <ul class="cc-nav cc-nav-pills cc-nav-color-cyan">
+                        <li class="active" role="list_work" group=""><a>未完成</a></li>
+                        <li role="list_worked"><a>已完成</a></li>
+                        <li role="list_new_work"><a>新建工作</a></li>
+                    </ul>
+                </div><!-- /.导航栏 -->
+
+                <!-- 内容列表 -->                
+                <ul class="cc-list cc-list-border" id="list_work">
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value">
+                                <span>负责人:<span>宗斌宗斌宗</span></span>
+                                <span>备注: <span>会议纪律会议纪律会议纪律会议纪律</span></span>
+                            </div>
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value">
+                                <span>负责人:<span>宗斌</span></span>
+                                <span>备注: <span>会议纪律</span></span>
+                            </div>
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value">
+                                <span>负责人:<span>宗斌</span></span>
+                                <span>备注: <span>会议纪律</span></span>
+                            </div>
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value">
+                                <span>负责人:<span>宗斌</span></span>
+                                <span>备注: <span>会议纪律</span></span>
+                            </div>
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="cc-list cc-list-border hide" id="list_worked">
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value">
+                                <span>负责人:<span>宗斌</span></span>
+                                <span>备注: <span>会议纪律</span></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="cc-list cc-list-border hide" id="list_new_work">
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value">
+                                <span>负责人:<span>宗斌</span></span>
+                                <span>备注: <span>会议纪律</span></span>
+                            </div>
+
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- /.内容列表 -->   
+
+            </div>
+        </div>        
+
+    </div>
+
+    <!-- popup, panel 等放在这里 -->
+    <div class="panel-overlay"></div>
+   
+
+
+    
+    <script type='text/javascript' src='../../bower_components/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../dist/js/oa.js'></script>
+    <script type='text/javascript' src='../../dist/js/workPlan/workPlan.js'></script>
+</body>
+</html>
