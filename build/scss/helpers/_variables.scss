@@ -9,12 +9,14 @@ $color-stack:
     (group: gray,        id: gray-77,        color: #777777 ),  //字体
     (group: gray,        id: gray-88,        color: #888888 ),  //字体
     (group: gray,        id: gray-89,        color: #898e91 ),  //字体    
+    (group: gray,        id: gray-c6,        color: #c6c6c6 ),  //字体
     (group: gray,        id: gray-d9,   color: #d9d9d9 ),  //border
     (group: gray,        id: gray-e5,   color: #e5e5e5 ),  //border
     (group: gray,        id: gray-bg,       color: #efefef ),  //背景  
     (group: gray,        id: gray-bg-light,       color: #f7fdff ),  //背景     
       
     (group: blue,        id: normal,        color: #0067bf ),  //蓝色
+    (group: blue,        id: blue-0b,    color: #0b95d6 ),
     (group: blue,        id: blue-light,    color: #16a7e6 ),
     (group: blue,        id: blue-lighter,  color: #57a0f2 ),     
 
@@ -32,8 +34,10 @@ $color-stack:
 
     (group: yellow,      id: normal,        color: #fca54b ),  //黄色   
 
-    (group: green,       id: normal,        color: #4cbb38 ),  //绿色
+    (group: green,       id: normal,        color: #4cbb38 ),  //绿色    
     (group: green,       id: green-cyan,    color: #19d5a8 ),  //绿色偏蓝
+    (group: green,       id: green,        color: #10b518 ),
+    
 
     (group: violet,      id: normal,        color: #cd5cf3 );  //紫色
 

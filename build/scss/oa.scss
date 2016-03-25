@@ -23,7 +23,13 @@
 //layout页面公共部分
 @import 'layout/_user-panel';
 @import 'layout/_cc-list';
+@import 'layout/_cc-module-list';
 @import 'layout/_nav';
+@import 'layout/_cc-calendar';
+
+
+//animate
+@import 'layout/animate/_cc-list';
 
 //base
 @import 'base/_normalize';

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!---->
+<html land="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <!--确保-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--为了确保适当的绘制和触屏缩放，需要在 <head> 之中添加 viewport 元数据标签。
+       添加 user-scalable=no 可以禁用其缩放（zooming）功能
+	 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">   
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --> 
+	<title>calendar</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="../dist/img/cc_ico.png" type="image/x-icon" />
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../dist/img/cc_ico.png" type="image/x-icon" />
+    <!-- sui-mobile -->
+     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../../dist/css/oa.css">
+    <link rel="stylesheet" href="../../dist/css/attendanceManage/attendance.css">
+
+
+</head>
+<body>
+    <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <!-- 单个page ,第一个.page默认被展示-->
+        <div class="page page-current" id="route1">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">考勤管理</h1>
+            </header>
+
+            <!-- 工具栏 -->
+
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <!-- 日历 -->                
+                <div class="cc-calendar" id="cal"></div><!-- /.日历 -->      
+                <ul class="marks-state">
+                    <li>
+                        <span class="mark blue-o"></span>
+                        正常
+                    </li>
+                    <li>
+                        <span class="mark violet-o"></span>
+                        迟到
+                    </li>
+                    <li>
+                        <span class="mark orange-o"></span>
+                        早退
+                    </li>
+                    <li>
+                        <span class="mark red-o"></span>
+                        异常
+                    </li>
+                </ul>          
+
+                <!-- 模块列表 -->
+                <ul class="cc-module-list clearfix">
+                    <li>
+                        <a class="external" href="../attendanceManage/businessTrip.html">
+                            <img src="../../dist/img/att-business-trip.png" alt="">
+                            出差
+                        </a>
+                    </li>
+                    <li>
+                        <a class="external" href="../attendanceManage/goOut.html">
+                            <img src="../../dist/img/att-go-out.png" alt="">
+                            外出
+                        </a>
+                    </li>
+                    <li>
+                        <a class="external" href="../attendanceManage/overtime.html">
+                            <img src="../../dist/img/att-overtime.png" alt="">
+                            加班
+                        </a>
+                    </li>
+                    <li>
+                        <a class="external" href="../attendanceManage/leave.html">
+                            <img src="../../dist/img/att-leave.png" alt="">
+                            请假
+                        </a>
+                    </li>
+                    <li>
+                        <a class="external" href="../attendanceManage/signCard.html">
+                            <img src="../../dist/img/att-sign-card.png" alt="">
+                            签卡
+                        </a>
+                    </li>
+                    <li>
+                        <a class="external" href="../attendanceManage/assignment.html">
+                            <img src="../../dist/img/att-assignment.png" alt="">
+                            外派
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>    
+
+
+    </div>
+
+    <script type='text/javascript' src='../../bower_components/zepto-full/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/calendar/zepto.mdater.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../dist/js/oa.js'></script>
+
+    <script>
+        (function(){
+            $('#cal').mdater({
+                marks:{                    
+                    violet_o: ["2016-03-01 09:00","2016-03-02 09:00"], // 迟到 紫色  、签卡
+                    yellow_o: ["2016-03-03 09:00"],  //早退  黄色
+                    red_o: ["2016-03-04 09:00"],    //红色，异常
+                    green_o: ["2016-03-05 09:00"],  //绿色 ，出差 、加班 、 请假、 外出
+                    orange_o: ["2016-03-06 09:00"],   //橙色 外派
+                    blue_o: ["2016-03-08 09:00","2016-03-09 09:00","2016-03-19 09:00"] //  正常 
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

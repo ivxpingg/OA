@@ -22,9 +22,9 @@
 	        > .value{
 	        	display: inline-block;
 	        	vertical-align: middle;
-	        	height: rem(46);
-	            font-size: rem(13);
-	            line-height: rem(46);
+	        	//height: rem(46);
+	            font-size: rem(14);
+	            //line-height: rem(46);
 	            color: color(gray, gray-58);
 	        }
 
@@ -32,12 +32,18 @@
 	        	display: block;
 	        	padding-left: rem(15);
 	        	font-size: rem(12);
-	        	line-height: rem(24);	        	
+	        	//line-height: rem(24);	        	
 	        	color: color(gray, gray-77);
 
 	        	span{
 	        		display: inline-block;
 	        		padding-right: rem(15);
+
+	        		> img{
+	        			margin: rem(-1) rem(5) 0 0;
+	        			width: rem(20);
+	        			vertical-align: middle;	        			
+	        		}
 	        	}
 	        }
 
@@ -58,6 +64,20 @@
 .cc-list{
 	> li > .cc-box > .value-lg{
 		font-size: rem(15);
+	}
+}
+
+.cc-list{
+	> li > .cc-box > .value-lger{
+		font-size: rem(16);
+	}
+}
+
+
+
+.cc-list{
+	> li > .cc-box > .sub-value-lg{
+		font-size: rem(14);
 	}
 }
 

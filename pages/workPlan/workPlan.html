@@ -24,7 +24,7 @@
         <div class="page page-current" id="route1">
             <!-- 标题栏 -->
             <header class="bar bar-nav">
-                <a class="icon pull-left back" href="#"><</a>
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
                 <h1 class="title">工作计划</h1>
             </header>
 
@@ -35,18 +35,18 @@
                 <!-- 导航栏 -->
                 <div class="nav-panel">
                     <ul class="cc-nav cc-nav-pills cc-nav-color-cyan">
-                        <li class="active" role="list_work" group=""><a>未完成</a></li>
-                        <li role="list_worked"><a>已完成</a></li>
+                        <li class="active" role="list_completed_work" group=""><a>未完成</a></li>
+                        <li role="list_not_completed_work"><a>已完成</a></li>
                         <li role="list_new_work"><a>新建工作</a></li>
                     </ul>
                 </div><!-- /.导航栏 -->
 
                 <!-- 内容列表 -->                
-                <ul class="cc-list cc-list-border" id="list_work">
+                <ul class="cc-list cc-list-border" id="list_completed_work">
                     <li>
-                        <a class="cc-box" href="#">
-                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
-                            <div class="sub-value">
+                        <a class="cc-box" href="#" onclick="completedWorkPlan('id');">
+                            <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌宗斌宗</span></span>
                                 <span>备注: <span>会议纪律会议纪律会议纪律会议纪律</span></span>
                             </div>
@@ -54,9 +54,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#">
-                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
-                            <div class="sub-value">
+                        <a class="cc-box" href="#"  onclick="completedWorkPlan('id');">
+                            <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌</span></span>
                                 <span>备注: <span>会议纪律</span></span>
                             </div>
@@ -64,9 +64,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#">
-                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
-                            <div class="sub-value">
+                        <a class="cc-box" href="#" onclick="completedWorkPlan('id');">
+                            <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌</span></span>
                                 <span>备注: <span>会议纪律</span></span>
                             </div>
@@ -74,9 +74,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#">
-                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
-                            <div class="sub-value">
+                        <a class="cc-box" href="#" onclick="completedWorkPlan('id');">
+                            <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌</span></span>
                                 <span>备注: <span>会议纪律</span></span>
                             </div>
@@ -85,11 +85,11 @@
                     </li>
                 </ul>
 
-                <ul class="cc-list cc-list-border hide" id="list_worked">
+                <ul class="cc-list cc-list-border hide" id="list_not_completed_work">
                     <li>
-                        <a class="cc-box" href="#">
-                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
-                            <div class="sub-value">
+                        <a class="cc-box" href="#"  onclick="notCompletedWorkPlan('id');">
+                            <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌</span></span>
                                 <span>备注: <span>会议纪律</span></span>
                             </div>
@@ -100,8 +100,8 @@
                 <ul class="cc-list cc-list-border hide" id="list_new_work">
                     <li>
                         <a class="cc-box" href="#">
-                            <span class="value value-lg">易乘蹭开发进展及其他工作进度安排</span>
-                            <div class="sub-value">
+                            <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
+                            <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌</span></span>
                                 <span>备注: <span>会议纪律</span></span>
                             </div>
@@ -114,7 +114,131 @@
                 <!-- /.内容列表 -->   
 
             </div>
-        </div>        
+        </div>     
+        
+        <!-- 这里是页面内容区 未完成-->
+        <div class="page" id="not_completed_work_plan">
+
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">未完成</h1>
+            </header><!-- /.标题栏 -->
+
+            <div class="content">
+                <!-- 内容列表 -->                
+                <ul class="cc-list cc-list-border" id="list_work">
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">标题:<span>易乘蹭开发进展及其他工作进度安排</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">负责人:<span>林静秋</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">参与人:<span class="font-color-blue">软件部</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">开始时间:<span class="font-color-red">2016-03-20</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">结束时间:<span class="font-color-red">2016-03-20</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">计划状态:<span class="font-color-green">未完成</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value  pad-tb-11">附件:<span>dd</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">内容:<span>易乘蹭开发进展及其他工作进度安排</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">备注:<span>会议计划</span></span>
+                        </a>
+                    </li>
+
+                </ul>
+                <!-- /.内容列表 -->   
+            </div>
+        </div> <!-- /.这里是页面内容区 -->
+
+        <!-- 这里是页面内容区 -->
+        <div class="page" id="completed_work_plan">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">已完成</h1>
+            </header><!-- /.标题栏 -->
+
+            <div class="content">
+                <!-- 内容列表 -->                
+                <ul class="cc-list cc-list-border" id="list_work">
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">标题:<span>易乘蹭开发进展及其他工作进度安排</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">负责人:<span>林静秋</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">参与人:<span>软件部</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">开始时间:<span>2016-03-20</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">结束时间:<span>2016-03-20</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">计划状态:<span>已完成</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">附件:<span>dd</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">内容:<span>易乘蹭开发进展及其他工作进度安排</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#">
+                            <span class="value pad-tb-11">备注:<span>会议计划</span></span>
+                        </a>
+                    </li>
+                </ul><!-- /.内容列表 -->   
+            </div>
+        </div> <!-- /.这里是页面内容区 -->
+
 
     </div>
 

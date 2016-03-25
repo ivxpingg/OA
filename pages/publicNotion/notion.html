@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!---->
+<html land="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <!--确保-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">   
+	<title>公共通知</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../dist/img/cc_ico.png" type="image/x-icon" />
+	<!-- sui-mobile -->
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../../dist/css/oa.css">
+    <link rel="stylesheet" href="../../dist/css/publicNotion/notion.css">
+
+</head>
+<body>
+    
+    <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <!-- 单个page ,第一个.page默认被展示-->
+        <div class="page page-current" id="route1">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">公共通知</h1>
+            </header>
+
+            <!-- 工具栏 -->
+
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <!-- 内容列表 -->                
+                <ul class="cc-list cc-list-border" id="list_completed_work">
+                    <li>
+                        <a class="cc-box" href="#" onclick="notionDetial('#notion_detial');">
+                            <span class="value  pad-tb-10 value-lg">员工2016年2月考勤汇总</span>
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cc-box" href="#" onclick="notionDetial('#notion_detial');">
+                            <span class="value pad-tb-10 value-lg">潮家人摆摊谁最帅——MIFI大派送</span>
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>    
+
+
+        <div class="page" id="notion_detial">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">通知详情</h1>
+            </header>
+
+            <!-- 工具栏 -->
+            <div class="content">
+                <div class="content-padded">
+                    <!-- 通知详情 -->
+                    <div class="notion-detail">
+                        <div class="notion-content">
+                            
+                            <div class="h4">员工2013年2月份考勤汇总</div>
+                            <div class="text">
+                                各位同事: </br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;2016年2月份具体考勤汇总，请查收附件，有疑问的请在明天（3月3日）10:00前联系人事行政部林明美。</br>人事行政部</br>2016年2月2日
+                            </div>
+                        
+                        </div>
+                        <div class="notion-attachment">附件下载: <span>长潮呈源易屏公司2016年2月份考勤统计表.xls下载</span>
+                        </div>
+                    </div>
+                    <!-- /.通知详情 -->
+                </div>
+            </div>
+        </div>  
+
+
+    </div>
+
+    <!-- popup, panel 等放在这里 -->
+    <div class="panel-overlay"></div>
+   
+
+
+    
+    <script type='text/javascript' src='../../bower_components/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../dist/js/oa.js'></script>
+    <script type='text/javascript' src='../../dist/js/publicNotion/notion.js'></script>
+</body>
+</html>

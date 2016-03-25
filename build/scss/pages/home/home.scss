@@ -17,27 +17,27 @@
 
 
 
-//模块列表
-.module-list{
-	margin: 0;
-	padding:0;
-	width: 100%;
-    list-style-type: none;
+// //模块列表
+// .module-list{
+// 	margin: 0;
+// 	padding:0;
+// 	width: 100%;
+//     list-style-type: none;
     
 
-    > li{
-    	float: left;
-    	padding: rem(25) rem(25) 0;
-    	width: 33.33333333%;    	
+//     > li{
+//     	float: left;
+//     	padding: rem(25) rem(25) 0;
+//     	width: 33.33333333%;    	
 
-    	> a{
-    		display: block;
-            text-align: center;
-            font-size: rem(15);
-            color: color(gray, gray-60);
-    		> img {
-    			width: 100%;
-    		}
-    	}
-    }
-}
+//     	> a{
+//     		display: block;
+//             text-align: center;
+//             font-size: rem(15);
+//             color: color(gray, gray-60);
+//     		> img {
+//     			width: 100%;
+//     		}
+//     	}
+//     }
+// }

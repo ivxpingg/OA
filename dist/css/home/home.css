@@ -5,24 +5,3 @@
 .news-notice .btn-app.fist-child {
   border-left: 0;
 }
-
-.module-list {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  list-style-type: none;
-}
-.module-list > li {
-  float: left;
-  padding: 1.25rem 1.25rem 0;
-  width: 33.33333333%;
-}
-.module-list > li > a {
-  display: block;
-  text-align: center;
-  font-size: 0.75rem;
-  color: #606366;
-}
-.module-list > li > a > img {
-  width: 100%;
-}

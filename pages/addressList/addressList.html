@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!---->
+<html land="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <!--确保-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">   
+	<title>通讯录</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../dist/img/cc_ico.png" type="image/x-icon" />
+	<!-- sui-mobile -->
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../../dist/css/oa.css">
+    <link rel="stylesheet" href="../../dist/css/addressList/addressList.css">
+
+</head>
+<body>
+    
+    <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <!-- 单个page ,第一个.page默认被展示-->
+        <div class="page page-current" id="route1">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">通讯录</h1>
+            </header>
+
+            <!-- 工具栏 -->
+
+            <!-- 这里是页面内容区 -->
+            <div class="content">            
+
+                <!-- 模块列表 -->
+                <ul class="cc-list cc-list-border list-address" id="listAddress">
+                    <li>
+                        <a class="cc-box" href="#">
+                            <div class="value value-lger pad-tb-11">长潮股份 </div>
+                            <div class="value value-lger pad-tb-11 pull-right mg-r-15">2</div>
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
+                        </a>
+                        <div class="box-body hide">
+                            <ul class="cc-list cc-list-border">
+                                <li>
+                                    <a class="cc-box" href="#">
+                                        <div class="value pad-tb-4 mg-t-6">甘志强</div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">手机: <span>13909628393</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">电话: <span>0592-3782526-8888</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">邮箱: <span>gzq@fjcckj.com</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">岗位: <span>长潮科技_总裁</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="cc-box" href="#">
+                                        <div class="value pad-tb-4 mg-t-6">蔡志卿</div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">手机: <span>13909628393</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">电话: <span>0592-3782526-8888</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">邮箱: <span>czq@fjcckj.com</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">岗位: <span>工程中心经理,市场营销部经理.常务副总裁</span></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a class="cc-box" href="#">
+                            <div class="value value-lger pad-tb-11">长潮股份 </div>
+                            <div class="value value-lger pad-tb-11 pull-right mg-r-15">2</div>
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
+                        </a>
+                        <div class="box-body hide">
+                            <ul class="cc-list cc-list-border">
+                                <li>
+                                    <a class="cc-box" href="#">
+                                        <div class="value pad-tb-4 mg-t-6">甘志强</div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">手机: <span>13909628393</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">电话: <span>0592-3782526-8888</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">邮箱: <span>gzq@fjcckj.com</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">岗位: <span>长潮科技_总裁</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="cc-box" href="#">
+                                        <div class="value pad-tb-4 mg-t-6">蔡志卿</div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">手机: <span>13909628393</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">电话: <span>0592-3782526-8888</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">邮箱: <span>czq@fjcckj.com</span></div>
+                                        <div class="sub-value sub-value-lg pad-tb-3">岗位: <span>工程中心经理,市场营销部经理.常务副总裁</span></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>    
+
+
+    </div>
+
+    <!-- popup, panel 等放在这里 -->
+    <div class="panel-overlay"></div>
+   
+
+
+    
+    <script type='text/javascript' src='../../plugins/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../dist/js/oa.js'></script>
+    <script type='text/javascript' src='../../dist/js/addressList/addressList.js'></script>
+</body>
+</html>

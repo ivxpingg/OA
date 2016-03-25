@@ -1,0 +1,21 @@
+
+
+@import '../../common/_common';
+
+
+
+
+.nav-panel{	
+	@include center-block();
+	padding-top: rem(10);
+	padding-bottom: rem(10);
+    width: 85.125%;
+    .cc-nav > li{
+    	width: 50%;
+    }
+
+	.cc-nav a{
+		width: 100%;
+	}
+}
+

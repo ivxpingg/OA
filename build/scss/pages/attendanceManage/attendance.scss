@@ -1,0 +1,19 @@
+@import '../../common/_common';
+
+.cc-form{
+	margin-bottom: rem(90);
+}
+
+.btn-panel{
+	position: fixed;
+    bottom: 0;   
+	margin: 0;
+	padding: rem(1) 0;
+	width: 100%;
+    
+    background-color: color(cyan);
+}
+
+.cc-list{
+	margin-top: rem(10);
+}

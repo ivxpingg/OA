@@ -15,7 +15,6 @@
         	$(this).parent().find('li').removeClass('active');
         	$("#" + role_current).addClass('hide');
         }
-
         
         $(this).addClass('active');
 
@@ -23,6 +22,12 @@
 
     });
 
-
-
 })();
+
+
+
+
+//表单验证
+
+
+

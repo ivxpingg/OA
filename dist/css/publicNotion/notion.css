@@ -1,0 +1,34 @@
+.content {
+  background-color: #efefef;
+}
+
+.content-padded {
+  margin: 0;
+  padding: 0 0.75rem;
+}
+
+.notion-detail .notion-content {
+  background-color: #fff;
+  margin: 0 -0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #d9d9d9;
+}
+.notion-detail .notion-content > .h4 {
+  font-size: 0.8rem;
+  line-height: 1.7rem;
+  color: #585858;
+  text-align: center;
+}
+.notion-detail .notion-content .text {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  color: #777777;
+}
+.notion-detail .notion-attachment {
+  margin: 0.4rem 0.5rem;
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  color: #777777;
+}
+
+/*# sourceMappingURL=notion.css.map */

@@ -1,0 +1,32 @@
+
+.cc-form{
+	margin: 0;
+
+	> ul > li{
+		border-bottom: 1px solid color(gray, gray-d9);
+	}
+
+	> ul li:first-child{
+		border-top: 1px solid color(gray, gray-d9);
+	}
+
+	.item-title, 
+	.item-input input,
+	.item-input select
+	{
+	    font-size: rem(15);
+	}
+
+
+	.item-title.label{
+		width: auto;
+	}
+
+	.item-input .font-color-red{
+		color: color(red);
+	}
+
+	.item-input .font-color-green{
+		color: color(green);
+	}
+}

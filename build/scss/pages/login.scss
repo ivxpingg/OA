@@ -8,6 +8,10 @@
 
 }
 
+.content-padded-sm{
+	margin: 0 1.25rem;
+}
+
 .logo-lg{
 	display: block;
 	width: 8.3rem;
@@ -46,7 +50,12 @@
 	    }
 	}
 
+}
 
 
+.form-title{
+	margin-top: rem(30);
+	font-size: rem(20);
+	text-align: center;
 }
 

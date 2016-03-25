@@ -12,12 +12,31 @@
 	}
 }
 
+.btn-cyan-o{
+    background: #fff;
+    border-color: #fff;
+    color: color(cyan);
+
+    &:hover,&:focus{
+        color:#fff;
+        background: #fff;
+        border-color: #fff;
+    }
+}
+
 .btn-link{
 	display: inline-block;
 	padding: .2rem .3rem;
 	font-size: .6rem;
     line-height: 1rem;    
     color: color(gray);
+}
+
+//按钮不要圆角
+.btn-flat {
+    border-radius: 0;
+    box-shadow: none;
+    border-width: 1px;
 }
 
 //#region
@@ -63,3 +82,14 @@
 
 
 //#endrgion
+
+
+//添加按钮
+
+.btn-add-img{
+    display: inline-block;
+
+    > img {
+         height: rem(24);
+    }
+}

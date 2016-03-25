@@ -1,3 +1,21 @@
+
+function notCompletedWorkPlan(){
+	'use strict';
+    
+     console.log('未完成的工作计划');
+
+     $.router.load("#completed_work_plan");  //加载内联页面
+};
+
+
+function completedWorkPlan(){
+	'use strict';
+	 console.log('已完成的工作计划');
+	 
+	 $.router.load("#not_completed_work_plan");  //加载内联页面
+}
+
+
 (function(){
 
 

@@ -2,6 +2,10 @@
   margin: 0 2.25rem;
 }
 
+.content-padded-sm {
+  margin: 0 1.25rem;
+}
+
 .logo-lg {
   display: block;
   width: 8.3rem;
@@ -33,4 +37,10 @@
 .form-lg .item-content:after > .item-inner:after {
   display: none;
   content: none;
+}
+
+.form-title {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
 }

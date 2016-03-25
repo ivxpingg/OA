@@ -1,0 +1,211 @@
+//日历
+
+.cc-calendar{
+
+     .md_panel{
+
+    	> .md_head{
+
+    		> .md_selectarea{
+    			position: relative;
+                
+                > .md_prev{
+                	position: absolute;
+                	top: rem(10);
+                	left: rem(15);
+                    display: inline-block;
+                    width: rem(32);
+                    height: rem(32);
+                    background-image: url(../img/pre-icon.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;                    
+                }
+
+                > .md_headtext{
+                	
+                	display: block;
+                	margin: 0 rem(52);
+                	font-size: rem(18);
+                	padding: rem(12.5);
+                	color: color(cyan);
+                	text-align: center;
+
+                }
+
+                > .md_next{
+                	position: absolute;
+                	top: rem(10);
+                	right: rem(15);
+                    display: inline-block;
+                    width: rem(32);
+                    height: rem(32);
+                    background-image: url(../img/next-icon.png);
+                    background-repeat: no-repeat;
+                    background-size: cover; 
+                }
+    		}
+
+    		> .md_selectarea.hide{
+    			display: none;
+    		}
+
+    	}
+
+    }
+}
+
+.cc-calendar{
+	.md_body{
+         position: relative;
+         min-height: rem(208);
+	    .md_weekarea{
+	    	list-style-type: none;
+	    	margin: 0;
+	    	padding: 0;
+	        background-color: color(cyan);
+	        @include clearfix();
+
+	    	> li{
+	    		float: left;
+	    		padding: rem(5) 0;
+	    		width: 14.28571%;
+	    		font-size: rem(14);
+	    		color: #fff;
+	    		text-align: center;
+
+	    		background-color: transparent;            
+	    	}
+	    }
+
+	    .md_datearea{
+	    	position: absolute;
+	    	list-style-type: none;
+	    	margin: 0;
+	    	padding: rem(6) 0 0;
+	    	background-color: #fff;
+	    	-webkit-transition: -webkit-transform .2s ease-in;
+	    	@include clearfix();
+
+	    	> li{
+	    		position: relative;
+	    		float: left;	    		
+	    		width: 14.28571%;	    			    		
+
+	    		> span{
+	    			display: block;
+	    			margin: rem(3) auto;
+	    			padding: rem(2) 0;
+	    			width: rem(28);
+	    			height: rem(28);
+	    			font-size: rem(14);
+	    			color: color(gray, gray-77);
+	    		    text-align: center;
+	    		}
+	    	}
+
+	    	> li.prevdate, li.nextdate{
+	    		> span{
+	    			color: color(gray, gray-c6);
+	    		}
+	    	}
+
+	    	> li.blue_o > span{
+                border: 1px solid color(blue, blue-0b);
+                border-radius: 50%;
+	    	}
+
+	    	> li.violet_o > span{
+	    		border: 1px solid color(violet);
+                border-radius: 50%;
+	    	}
+
+	    	> li.yellow_o > span{
+	    		border: 1px solid color(yellow);
+                border-radius: 50%;
+	    	}
+
+	    	> li.red_o > span{
+	    		border: 1px solid color(red);
+                border-radius: 50%;
+	    	}
+
+	    	> li.cyan_o > span{
+	    		border: 1px solid color(cyan, cyan-lightest);
+                border-radius: 50%;
+	    	}
+
+	    	> li.orange_o > span{
+	    		border: 1px solid color(orange);
+                border-radius: 50%;
+	    	}
+
+	    }
+	}
+}
+
+
+.cc-calendar{
+	.md_foot{
+		display: none;
+	}
+}
+
+.out_left{-webkit-transform: translate3d(-100%,0,0);}
+.out_right{-webkit-transform: translate3d(100%,0,0);}
+
+
+
+
+//标签
+.marks-state{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+    border-top: 1px solid color(gray, gray-d9);
+    border-bottom: 1px solid color(gray, gray-d9);
+    @include clearfix();
+    > li{
+    	float: left;
+    	padding: rem(6) 0;
+    	width: rem(80);
+    	color: color(gray, gray-77);
+    	font-size: rem(14);
+    	text-align: center;
+        
+
+    	> .mark{
+             display: inline-block;
+             margin-right: rem(4);
+             vertical-align: middle;
+             width: rem(20);
+             height: rem(20);
+             border: 1px solid color(gray, gray-d9);
+             border-radius: 50%;
+             background-color: color(gray, gray-bg-light);
+
+             &.blue-o{
+                border: 1px solid color(blue, blue-0b);
+	    	}
+
+	    	&.violet-o{
+	    		border: 1px solid color(violet);
+	    	}
+
+	    	&.yellow-o{
+	    		border: 1px solid color(yellow);
+	    	}
+
+	    	&.red-o{
+	    		border: 1px solid color(red);
+	    	}
+
+	    	&.cyan-o{
+	    		border: 1px solid color(cyan, cyan-lightest);
+	    	}
+
+	    	&.orange-o{
+	    		border: 1px solid color(orange);
+	    	}
+    	}
+    }
+}

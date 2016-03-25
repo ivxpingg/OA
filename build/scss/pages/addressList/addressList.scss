@@ -1,0 +1,31 @@
+@import '../../common/_common';
+
+
+.list-address{
+    > li {
+    	background-color: color(gray, gray-bg);
+    }
+
+    > li:first-child{
+    	border-top: 0;
+    }
+}
+
+
+.box-body{
+
+	margin: 0 rem(-15);
+	padding-left: rem(15);
+	height: 0;
+	border-top: 1px solid color(gray, gray-d9);
+    background-color: #fff;
+    overflow: hidden;
+
+    .cc-list-border>li:first-child{
+    	border-top: 0;
+    }
+
+    .cc-list-border>li:last-child{
+    	border-bottom: 0;
+    }
+}
