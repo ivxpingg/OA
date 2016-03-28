@@ -1,10 +1,12 @@
+
+
+
 (function(){
      'use strict';
 	 // $.init();
 
-     $("#datetime-start,#datetime-end").datetimePicker({
+     $("#txtStartTime, #txtEndTime").datetimePicker({});
 
-     });
 
      $('#cal').mdater({
         marks:{                    
@@ -24,17 +26,56 @@
 
 function save(){
     'use strict';
-     
+     formValidate();
+    //var attributes = document.querySelector("#formList");
 
+    //console.log(validate.collectFormValues(attributes));
+    //console.log(validate.collectFormValues(attributes)); 获取表单值
 
 };
 
 //表单验证
-function validate(){
+function formValidate(){
+
+    validate.extend(validate.validators.datetime, {
+        // The value is guaranteed not to be null or undefined but otherwise it
+        // could be anything.
+        parse: function(value, options) {
+          return +moment.utc(value);
+        },
+        // Input is a unix timestamp
+        format: function(value, options) {
+          var format = options.dateOnly ? "YYYY-MM-DD" : "YYYY-MM-DD hh:mm:ss";
+          return moment.utc(value).format(format);
+        }
+      });
+
+    var attribute = document.querySelector("#formList");    
     var constraints = {
+        txtName: {
+            presence: true        
+        },
+
+        txtStartTime: {
+            presence: true
+        },
+        
+        txtEndTime: {
+            presence: true,
+            datetime: {
+                //结束时间不能早于开始时间
+                earliest: document.querySelector("#txtStartTime").value == "" ? "1900-01-01" : document.querySelector("#txtStartTime").value
+            }
+
+        }
 
     };
 
-    var attribute = document.querySelector("#formTelephone");
+    
     var errors = validate(attribute, constraints) || [];
+
+    for(var attr in errors){
+        $.toast(errors[attr]);
+        return;
+    }
 };

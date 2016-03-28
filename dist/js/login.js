@@ -2,6 +2,8 @@
 
 function login(){   
     //#region 表单验证 
+
+
     var constraints = {
     	userName: {
     	  // 必须的
@@ -13,8 +15,8 @@ function login(){
     	}
 
     }
-    var attribute = document.querySelector("#formLogin");
-    var errors = validate(attribute, constraints) || [];
+    var attributes = document.querySelector("#formLogin");     
+    var errors = validate(attributes, constraints) || [];
 
     for(var attr in errors){
     	$.toast(errors[attr]);
@@ -23,7 +25,7 @@ function login(){
 
     //#regionEnd 表单验证
 
-    
+    //console.log(validate.collectFormValues(attributes)); 获取表单值
     //
 	window.location.href = "home/home.html";
 }

@@ -79,7 +79,7 @@
             <!-- 表单 -->
             <div class="content content-bg">
 
-              <div class="list-block cc-form">
+              <div class="list-block cc-form" id="formList">
                 <ul>
                   <!-- Text inputs -->
                   <li>
@@ -87,7 +87,7 @@
                       <div class="item-inner">
                         <div class="item-title label">申请人:</div>
                         <div class="item-input">
-                          <input id="name" type="text" placeholder="名字" name="name" title="申请人">
+                          <input id="txtName" type="text" placeholder="名字" name="txtName" title="申请人">
                         </div>
                       </div>
                     </div>
@@ -97,9 +97,9 @@
                       <div class="item-inner">
                         <div class="item-title label">部门:</div>
                         <div class="item-input">
-                          <select id="sel_department" name="department" title="">
-                            <option>软件部</option>
-                            <option>市场部</option>
+                          <select id="selDepartment" name="selDepartment" title="">
+                            <option value="0">软件部</option>
+                            <option value="1">市场部</option>
                           </select>
                         </div>
                       </div>
@@ -110,7 +110,7 @@
                       <div class="item-inner">
                         <div class="item-title label">开始时间:</div>
                         <div class="item-input">
-                          <input class="font-color-red" type="text" id='datetime-start'/>
+                          <input class="font-color-red" id="txtStartTime" type="text" name="txtStartTime" title="开始时间"/>
                         </div>
                       </div>
                     </div>
@@ -120,7 +120,7 @@
                       <div class="item-inner">
                         <div class="item-title label">结束时间:</div>
                         <div class="item-input">
-                          <input class="font-color-red" type="text" id='datetime-end'/>
+                          <input class="font-color-red" id='txtEndTime' type="text" name="txtEndTime" title="结束时间" />
                         </div>
                       </div>
                     </div>
@@ -130,7 +130,7 @@
                       <div class="item-inner">
                         <div class="item-title label">出差时长:</div>
                         <div class="item-input">
-                          <input class="font-color-red" type="text" value="1" />
+                          <input class="font-color-red" id="txtTimes" type="text" name="txtTimes" title="出差时长" />
                         </div>
                       </div>
                     </div>
@@ -141,7 +141,7 @@
                       <div class="item-inner">
                         <div class="item-title label">交通工具:</div>
                         <div class="item-input">
-                          <input type="text" value="飞机" />
+                          <input id="txtTransport" type="text" name="txtTransport" title="交通工具" />
                         </div>
                       </div>
                     </div>
@@ -152,7 +152,7 @@
                       <div class="item-inner">
                         <div class="item-title label">出差地点:</div>
                         <div class="item-input">
-                          <input type="text" />
+                          <input id="txtAddress" type="text" name="txtAddress" title="出差地点" />
                         </div>
                       </div>
                     </div>
@@ -163,7 +163,7 @@
                       <div class="item-inner">
                         <div class="item-title label">出差事由:</div>
                         <div class="item-input">
-                          <input type="text" />
+                          <input id="txtReason" type="text" name="txtReason" title="出差事由" />
                         </div>
                       </div>
                     </div>
@@ -174,7 +174,7 @@
                       <div class="item-inner">
                         <div class="item-title label">交通费:</div>
                         <div class="item-input">
-                          <input type="text" />
+                          <input id="txtTransportCosts" type="text" name="txtTransportCosts" title="交通费"/>
                         </div>
                       </div>
                     </div>
@@ -185,7 +185,7 @@
                       <div class="item-inner">
                         <div class="item-title label">住宿费:</div>
                         <div class="item-input">
-                          <input type="text" />
+                          <input id="txtAccommodationCosts" type="text" name="txtAccommodationCosts" title="住宿费" />
                         </div>
                       </div>
                     </div>
@@ -196,7 +196,7 @@
                       <div class="item-inner">
                         <div class="item-title label">其它费用:</div>
                         <div class="item-input">
-                          <input type="text" />
+                          <input id="txtOtherCosts" type="text" name="txtOtherCosts" title="其它费用" />
                         </div>
                       </div>
                     </div>
@@ -207,7 +207,7 @@
                       <div class="item-inner">
                         <div class="item-title label">超标费用预计:</div>
                         <div class="item-input">
-                          <input type="text" />
+                          <input id="txtExcessCosts" type="text" name="txtExcessCosts" title="超标费用预计" />
                         </div>
                       </div>
                     </div>
@@ -238,9 +238,11 @@
 
     
     <script type='text/javascript' src='../../bower_components/zepto-full/zepto.min.js' charset='utf-8'></script>
-    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/calendar/zepto.mdater.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../bower_components/moment/moment.js'></script>
+    <script type='text/javascript' src='../../bower_components/validate/validate.js'></script>
     <script type='text/javascript' src='../../dist/js/oa.js'></script>
     <script type='text/javascript' src='../../dist/js/attendanceManage/businessTrip.js'></script>
 </body>
