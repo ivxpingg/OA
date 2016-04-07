@@ -5,7 +5,18 @@
      'use strict';
 	 // $.init();
 
-     $("#txtStartTime, #txtEndTime").datetimePicker({});
+     var date = new Date;
+     var year_now = date.getFullYear();
+     var month_now = date.getMonth() + 1;
+     var day_now = date.getDate();
+
+     $("#txtStartTime").datetimePicker({
+        value: [year_now, month_now , day_now,'9' ,'00']
+     });
+     $("#txtEndTime").datetimePicker({
+        value: [year_now, month_now , day_now,'17' ,'30']
+     })
+
 
 
      $('#cal').mdater({

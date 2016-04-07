@@ -4,10 +4,55 @@
 	background-color: color(gray,gray-bg-light);
 }
 
+.content-padded-sm{
+	margin: 0 1.25rem;
+}
+
 .cc-list{
 	margin-top: rem(10);
 }
 
 .content-padded{
 	margin-top: rem(18);
+}
+
+
+.form-lg{
+	> ul:before,ul:after{
+		display: none;
+		content: none;
+	}
+
+	>ul li{
+		margin-top: .5rem;
+	}
+
+	.item-content:after{
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    right: auto;
+	    top: auto;
+	    height: 1px;
+	    width: 100%;
+	    background-color: color(cyan);
+	    display: block;
+	    z-index: 15;
+	    -webkit-transform-origin: 50% 100%;
+	    transform-origin: 50% 100%;
+
+	    > .item-inner:after{
+            display: none;
+		    content: none;
+	    }
+	}
+
+}
+
+
+.form-title{
+	margin-top: rem(30);
+	font-size: rem(20);
+	text-align: center;
 }
