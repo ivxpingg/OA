@@ -5,18 +5,18 @@ module.exports = function(grunt){
      grunt.initConfig({
      	watch: {
      		files: [
-                   'build/scss/*.scss',
-                   'build/scss/base/*.scss',
-                   'build/scss/helpers/*scss',
-                   'build/scss/layout/*scss',
-                   'build/scss/pages/*.scss',
-                   'build/scss/pages/home/*.scss',
-                   'build/scss/pages/workPlan/*.scss',
-                   'build/scss/pages/publicNotion/*.scss',
-                   'build/scss/pages/addressList/*.scss',
-                   'build/scss/pages/attendanceManage/*.scss',
-                   'build/scss/pages/process/*.scss',
-                   'build/scss/pages/email/*.scss'
+                   'build/**/*.scss'//,
+                   // 'build/scss/base/*.scss',
+                   // 'build/scss/helpers/*scss',
+                   // 'build/scss/layout/*scss',
+                   // 'build/scss/pages/*.scss',
+                   // 'build/scss/pages/home/*.scss',
+                   // 'build/scss/pages/workPlan/*.scss',
+                   // 'build/scss/pages/publicNotion/*.scss',
+                   // 'build/scss/pages/addressList/*.scss',
+                   // 'build/scss/pages/attendanceManage/*.scss',
+                   // 'build/scss/pages/process/*.scss',
+                   // 'build/scss/pages/email/*.scss'
      		],
      		tasks: ['sass:production', 'autoprefixer']
      	},
@@ -64,7 +64,6 @@ module.exports = function(grunt){
                     }
                }
           }
-
 
 
      });
