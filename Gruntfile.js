@@ -2,10 +2,14 @@ module.exports = function(grunt){
 
      'use strict';
 
-     grunt.initConfig({
+     var banner = '/* \n *长潮OA \n*/\n';
+     
+     grunt.initConfig({      
      	watch: {
      		files: [
-                   'build/**/*.scss'//,
+                   'build/**/*.scss',
+                   'build/*.js',
+                   'build/**/*.js',
                    // 'build/scss/base/*.scss',
                    // 'build/scss/helpers/*scss',
                    // 'build/scss/layout/*scss',
@@ -18,7 +22,7 @@ module.exports = function(grunt){
                    // 'build/scss/pages/process/*.scss',
                    // 'build/scss/pages/email/*.scss'
      		],
-     		tasks: ['sass:production', 'autoprefixer']
+     		tasks: ['sass:production', 'autoprefixer', 'build']
      	},
 
      	//Sass 编译
@@ -46,9 +50,28 @@ module.exports = function(grunt){
      			}
      		}
      	},
- 
+      
+      //合并JS
+      concat: {
+          options: {
+            banner: banner,
+            separator: ';',
+            sourceMap: true
+          },
+          app: {
+            src: [                
+                'build/js/utils/var.js',     //代码前置
+                'build/js/utils/extend.js',  //代码前置
+                'build/js/utils/*.js',       // ..
+                'build/js/**/*.js',          //代码合并顺序随意，默认会过滤前置或后置代码块
+                'build/js/oa.js',            //代码后置
+            ],
+            dest: 'dist/js/app.js'
+          }
+          
+      },
 
-          autoprefixer: {
+      autoprefixer: {
                dist: {
                     files: {
                         'dist/css/oa.css': 'dist/css/oa.css',
@@ -71,9 +94,11 @@ module.exports = function(grunt){
      grunt.loadNpmTasks('grunt-contrib-sass');
      grunt.loadNpmTasks('grunt-contrib-watch');
      grunt.loadNpmTasks('grunt-contrib-clean');
+     grunt.loadNpmTasks('grunt-contrib-concat');
      grunt.loadNpmTasks('grunt-autoprefixer');    //自动为 某些 CSS 属性添加针对特定厂商的前缀
 
 
      grunt.registerTask('default', ['watch']);
+     grunt.registerTask('build', ['concat']);
      grunt.registerTask('com', ['sass:production','autoprefixer']);
 };

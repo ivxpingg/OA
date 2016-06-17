@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
     <link rel="stylesheet" href="../../dist/css/oa.css">
-    <link rel="stylesheet" href="../../dist/css/workPlan/workPlan.css">
+    
 
 </head>
 <body>
@@ -21,7 +21,8 @@
     <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
     <div class="page-group">
         <!-- 单个page ,第一个.page默认被展示-->
-        <div class="page page-current" id="route1">
+        <div class="page page-current" id="workPlan">
+           <link rel="stylesheet" href="../../dist/css/workPlan/workPlan.css">
             <!-- 标题栏 -->
             <header class="bar bar-nav">
                 <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
@@ -44,7 +45,7 @@
                 <!-- 内容列表 -->                
                 <ul class="cc-list cc-list-border" id="list_completed_work">
                     <li>
-                        <a class="cc-box" href="#" onclick="completedWorkPlan('id');">
+                        <a class="cc-box" href="#" onclick="utils.routerLoad('id');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌宗斌宗</span></span>
@@ -54,7 +55,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#"  onclick="completedWorkPlan('id');">
+                        <a class="cc-box" href="#"  onclick="utils.routerLoad('id');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌</span></span>
@@ -64,7 +65,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#" onclick="completedWorkPlan('id');">
+                        <a class="cc-box" href="#" onclick="utils.routerLoad('id');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌</span></span>
@@ -74,7 +75,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#" onclick="completedWorkPlan('id');">
+                        <a class="cc-box" href="#" onclick="utils.routerLoad('id');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌</span></span>
@@ -87,7 +88,7 @@
 
                 <ul class="cc-list cc-list-border hide" id="list_not_completed_work">
                     <li>
-                        <a class="cc-box" href="#"  onclick="notCompletedWorkPlan('id');">
+                        <a class="cc-box" href="#"  onclick="utils.routerLoad('id');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span>负责人:<span>宗斌</span></span>
@@ -251,7 +252,6 @@
     <script type='text/javascript' src='../../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
-    <script type='text/javascript' src='../../dist/js/oa.js'></script>
-    <script type='text/javascript' src='../../dist/js/workPlan/workPlan.js'></script>
+    <script type='text/javascript' src='../../dist/js/app.js'></script>
 </body>
 </html>

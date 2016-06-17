@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
     <link rel="stylesheet" href="../../dist/css/oa.css">
-    <link rel="stylesheet" href="../../dist/css/email/emails.css">
+    
 
 </head>
 <body>
@@ -21,7 +21,8 @@
     <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
     <div class="page-group">
         <!-- 单个page ,第一个.page默认被展示-->
-        <div class="page page-current" id="route1">
+        <div class="page page-current" id="unreadEmails">
+            <link rel="stylesheet" href="../../dist/css/email/emails.css">
             <!-- 标题栏 -->
             <header class="bar bar-nav">
                 <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
@@ -36,14 +37,14 @@
                <!-- 邮件列表 -->
                 <ul class="cc-list cc-list-border" id="list_completed_work">
                     <li>
-                        <a class="cc-box" href="#" onclick="emailDetial('#email_info')">
+                        <a class="cc-box" href="#" onclick="utils.routerLoad('#email_info')">
                             <div class="value value-lger value-dot pad-tb-4 mg-t-6">fjcckj(myp)</div>
                             <div class="sub-value pad-tb-4 sub-value-lg">标题: <span>易乘蹭工作进展和其它工作进度安排</span></div>
                             <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#" onclick="emailDetial('#email_info')">
+                        <a class="cc-box" href="#" onclick="utils.routerLoad('#email_info')">
                             <div class="value value-lger value-dot pad-tb-4 mg-t-6">fjcckj(myp)</div>
                             <div class="sub-value pad-tb-4 sub-value-lg">标题: <span>易乘蹭工作进展和其它工作进度安排</span></div>
                             <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
@@ -95,7 +96,6 @@
     <script type='text/javascript' src='../../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
-    <script type='text/javascript' src='../../dist/js/oa.js'></script>
-    <script type='text/javascript' src='../../dist/js/email/unreadEmails.js'></script>
+    <script type='text/javascript' src='../../dist/js/app.js'></script>
 </body>
 </html>
