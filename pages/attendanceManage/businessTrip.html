@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
     <link rel="stylesheet" href="../../dist/css/oa.css">
-    <link rel="stylesheet" href="../../dist/css/attendanceManage/attendance.css">
+    
 
 </head>
 <body>
@@ -21,12 +21,13 @@
     <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
     <div class="page-group">
         <!-- 单个page ,第一个.page默认被展示-->
-        <div class="page page-current" id="route1">
+        <div class="page page-current" id="businessTrip">
+            <link rel="stylesheet" href="../../dist/css/attendanceManage/attendance.css">
             <!-- 标题栏 -->
             <header class="bar bar-nav">
                 <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
                 <h1 class="title">出差</h1>
-                <a class="icon pull-right btn-add-img" href="#add"><img src="../../dist/img/add-icon.png" alt=""></a>
+                <a class="icon pull-right btn-add-img" onclick="utils.routerLoad('#add')"><img src="../../dist/img/add-icon.png" alt=""></a>
             </header>
 
             <!-- 工具栏 -->
@@ -87,7 +88,7 @@
                       <div class="item-inner">
                         <div class="item-title label">申请人:</div>
                         <div class="item-input">
-                          <input id="txtName" type="text" placeholder="名字" name="txtName" title="申请人">
+                          <input id="userName" type="text" placeholder="名字" name="userName" title="申请人">
                         </div>
                       </div>
                     </div>
@@ -219,7 +220,7 @@
               <div class="content-block btn-panel">
                 <div class="row">
                   <div class="col-50"><a href="#" class="button button-big btn-flat btn-cyan back">取消</a></div>
-                  <div class="col-50"><a href="#" class="button button-big btn-flat btn-cyan-o" onclick="save();">提交</a></div>
+                  <div class="col-50"><a href="#" class="button button-big btn-flat btn-cyan-o" onclick="businessTrip.save();">提交</a></div>
                 </div>
               </div>
             </div>
@@ -243,7 +244,6 @@
     <script type='text/javascript' src='../../plugins/calendar/zepto.mdater.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/moment/moment.js'></script>
     <script type='text/javascript' src='../../plugins/validate/validate.js'></script>
-    <script type='text/javascript' src='../../dist/js/oa.js'></script>
-    <script type='text/javascript' src='../../dist/js/attendanceManage/businessTrip.js'></script>
+    <script type='text/javascript' src='../../dist/js/app.js'></script>
 </body>
 </html>

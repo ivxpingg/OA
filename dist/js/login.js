@@ -1,13 +1,10 @@
 function login() {
     //#region 表单验证 
-
-
     var constraints = {
         userName: {
             // 必须的
             presence: true
         },
-
         password: {
             presence: true
         }
@@ -46,16 +43,14 @@ function editPwd(pageId) {
                 message: "^请输入正确电话号码"
             }
         }
-    }
-
-    var attribute = document.querySelector("#formTelephone");
-    var errors = validate(attribute, constraints) || [];
-
-    for (var attr in errors) {
-        $.toast(errors[attr]);
-        return;
-    }
-
+    };
+    //var attribute = document.querySelector("#formTelephone");
+    utils.validate('formTelephone', constraints);
+    //var error = utils.validate('formTelephone', constraints, false); //不提示错误
+    
+    var formValues = utils.collectFormValues('formTelephone');
+     console.log(formValues);
+  
     $.router.load(pageId);
 };
 

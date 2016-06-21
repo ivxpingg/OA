@@ -1,2 +1,5 @@
 //utils参数
-var utils = {};
+
+var utils = {},
+    com = {};
+

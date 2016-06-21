@@ -50,8 +50,8 @@
                         </ul>
                      </div>
 
-                     <a href="#" class="button button-big btn-cyan" onclick="login();">登录</a>
-                     <a class="btn-link pull-right" onclick="forgetPwd('#editPwdPhone')">忘记密码?</a>
+                     <a href="#" class="button button-big btn-cyan" onclick="login.loginValidate();">登录</a>
+                     <a class="btn-link pull-right" onclick="utils.routerLoad('#editPwdPhone')">忘记密码?</a>
                  </div>
 
             </div>
@@ -85,7 +85,7 @@
                         </ul>
                      </div>
 
-                     <a href="#" class="button button-big btn-cyan" onclick="editPwd('#editPwd')">下一步</a>
+                     <a href="#" class="button button-big btn-cyan" onclick="login.editPwd('#editPwd')">下一步</a>
                  </div>
 
             </div>
@@ -125,7 +125,7 @@
                         </ul>
                      </div>
 
-                     <a href="#" class="button button-big btn-cyan" onclick="modifyPwd('#login')">完成</a>
+                     <a href="#" class="button button-big btn-cyan" onclick="login.modifyPwd('#login')">完成</a>
                  </div>
 
             </div>
@@ -142,6 +142,8 @@
     <script type='text/javascript' src='../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../plugins/suiMobile/dist/js/sm.js' charset='utf-8'></script>
     <script type='text/javascript' src='../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../plugins/calendar/zepto.mdater.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../plugins/moment/moment.js'></script>
     <script type='text/javascript' src='../plugins/validate/validate.js'></script>
 
     <script type='text/javascript' src='../dist/js/app.js'></script>

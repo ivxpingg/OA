@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!---->
+<html land="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <!--确保-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">   
+	<title>车辆维护</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../dist/img/cc_ico.png" type="image/x-icon" />
+	<!-- sui-mobile -->
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../../dist/css/oa.css">
+    
+
+</head>
+<body>
+    
+    <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <!-- 单个page ,第一个.page默认被展示-->
+        <div class="page page-current" id="meetingApply">
+            <link rel="stylesheet" href="../../dist/css/apply/applyList.css">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">车辆维护</h1>
+            </header>
+
+            <!-- 工具栏 -->
+
+            <!-- 这里是页面内容区 -->
+            <!-- 表单 -->
+            <div class="content content-bg">
+
+              <div class="list-block cc-form"  id="formList">
+                <ul>
+                  <!-- Text inputs -->
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">车牌:</div>
+                        <div class="item-input">
+                           <select>
+                             <option>闽D27W92</option>
+                             <option>闽DE721P(宝马小轿车)</option>
+                             <option>闽DBW659(天语商务车)</option>
+                             <option>闽D93H71(五菱面包车)</option>
+                           </select>
+                           <span class="btn btn-link">使用情况</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">用车人:</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="名字">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">用车部门:</div>
+                        <div class="item-input">
+                           <select>
+                             <option>软件部</option>
+                             <option>市场部</option>
+                           </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">维护日期:</div>
+                        <div class="item-input">
+                          <input class="font-color-red" type="text" id='datetime'/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">维护预算:</div>
+                        <div class="item-input">
+                            <input type="number" >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">当前公里数:</div>
+                        <div class="item-input">
+                            <input type="number" >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="align-top">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">维护地点:</div>
+                        <div class="item-input">
+                            <input type="text">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <li class="align-top">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">用车事由:</div>
+                        <div class="item-input">
+                             <textarea></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                 
+                </ul>
+              </div>
+
+              <div class="content-block btn-panel">
+                <div class="row">
+                  <div class="col-50"><a href="#" class="button button-big btn-flat btn-cyan back">取消</a></div>
+                  <div class="col-50"><a href="#" class="button button-big btn-flat btn-cyan-o" onclick="test1();">提交</a></div>
+                </div>
+              </div>
+            </div>
+            <!-- /.表单 -->
+        </div>    
+
+
+    </div>
+
+    <!-- popup, panel 等放在这里 -->
+    <div class="panel-overlay"></div>
+   
+
+
+    
+    <script type='text/javascript' src='../../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../dist/js/oa.js'></script>
+    <script type='text/javascript' src='../../dist/js/apply/meetingApply.js'></script>
+</body>
+</html>

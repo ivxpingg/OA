@@ -13,6 +13,11 @@
     * 页面初始化
     */
 
+    //登陆页
+    $(document).on("pageInit","#login", function(e, pageId, $page){
+    	 login.init();
+    });
+
     //首页
     $(document).on("pageInit","#home", function(e, pageId, $page){
     	 home.init();
@@ -48,10 +53,37 @@
     	 addressList.init();
     });
 
-    //考勤管理
+    //#region考勤管理
     $(document).on("pageInit","#attendanceManage", function(e, pageId, $page){
     	 attendanceManage.init();
     });
+                
+        //出差
+        $(document).on("pageInit","#businessTrip", function(e, pageId, $page){
+    	     businessTrip.init();
+        });
+        //外出
+        $(document).on("pageInit","#goOut", function(e, pageId, $page){
+    	     goOut.init();
+        });
+        //加班
+        $(document).on("pageInit","#overtime", function(e, pageId, $page){
+    	     overtime.init();
+        });
+        //请假
+        $(document).on("pageInit","#leave", function(e, pageId, $page){
+    	     leave.init();
+        });
+        //签卡
+        $(document).on("pageInit","#signCard", function(e, pageId, $page){
+    	     signCard.init();
+        });
+        //外派
+        $(document).on("pageInit","#assignment", function(e, pageId, $page){
+    	     assignment.init();
+        });
+    //#endregion
+
 
     //工作计划
     $(document).on("pageInit","#workPlan", function(e, pageId, $page){

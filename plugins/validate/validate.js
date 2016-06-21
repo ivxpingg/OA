@@ -879,7 +879,14 @@
             equalTo:              function(v, c) { return v === c; },
             lessThan:             function(v, c) { return v < c; },
             lessThanOrEqualTo:    function(v, c) { return v <= c; }
-          };
+          }
+        , checksZh = {
+          greaterThan: "大于",
+          greaterThanOrEqualTo: "大于或等于",
+          equalTo: "等于",
+          lessThan: "小于",
+          lessThanOrEqualTo: "小于或等于"
+        };
 
       // Coerce the value to a number unless we're being strict.
       if (options.noStrings !== true && v.isString(value)) {
@@ -908,7 +915,7 @@
 
           errors.push(v.format(msg, {
             count: count,
-            type: v.prettify(name)
+            type: v.prettify(checksZh[name])
           }));
         }
       }

@@ -47,6 +47,7 @@ module.exports = function(grunt){
                         'dist/css/attendanceManage/attendance.css': 'build/scss/pages/attendanceManage/attendance.scss',
                         'dist/css/process/process.css': 'build/scss/pages/process/process.scss',
                         'dist/css/email/emails.css': 'build/scss/pages/email/emails.scss',
+                        'dist/css/apply/applyList.css': 'build/scss/pages/apply/applyList.scss'
      			}
      		}
      	},
@@ -60,11 +61,12 @@ module.exports = function(grunt){
           },
           app: {
             src: [                
-                'build/js/utils/var.js',     //代码前置
-                'build/js/utils/extend.js',  //代码前置
-                'build/js/utils/*.js',       // ..
-                'build/js/**/*.js',          //代码合并顺序随意，默认会过滤前置或后置代码块
-                'build/js/oa.js',            //代码后置
+                'build/js/utils/var.js',         //代码前置
+                'build/js/utils/utils.extend.js', //代码前置
+                'build/js/utils/utils.com.js',
+                'build/js/utils/*.js',           // ..
+                'build/js/**/*.js',              //代码合并顺序随意，默认会过滤前置或后置代码块
+                'build/js/oa.js',                //代码后置
             ],
             dest: 'dist/js/app.js'
           }
@@ -83,7 +85,8 @@ module.exports = function(grunt){
                         'dist/css/addressList/addressList.css': 'dist/css/addressList/addressList.css',
                         'dist/css/attendanceManage/attendance.css': 'dist/css/attendanceManage/attendance.css',
                         'dist/css/process/process.css': 'dist/css/process/process.css',
-                        'dist/css/email/emails.css': 'dist/css/email/emails.css'
+                        'dist/css/email/emails.css': 'dist/css/email/emails.css',
+                        'dist/css/applyList/applyList.css': 'dist/css/applyList/applyList.css'
                     }
                }
           }
