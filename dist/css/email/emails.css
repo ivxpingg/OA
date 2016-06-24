@@ -13,10 +13,6 @@
   content: "";
 }
 
-.content {
-  background-color: #efefef;
-}
-
 .content-padded {
   margin: 0;
   padding: 0 0.75rem;
@@ -44,4 +40,29 @@
   font-size: 0.7rem;
   line-height: 0.9rem;
   color: #777777;
+}
+
+.list-block .item-input > .value {
+  padding-left: 0.25rem;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.email-header {
+  position: relative;
+  padding: 0.4rem 0.75rem 0.5rem;
+  background-color: #fff;
+}
+.email-header .email-title {
+  font-size: 0.9rem;
+}
+.email-header > .btn-link {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0rem;
+}
+
+.email-content {
+  padding: 0.75rem;
+  font-size: 0.8rem;
 }

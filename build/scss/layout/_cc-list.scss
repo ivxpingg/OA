@@ -11,6 +11,7 @@
 		> .cc-box{
 			position: relative;
 			display: block;
+			padding-bottom: 0.5px;
 			font-size: 0;
 
 			> .img{
@@ -91,4 +92,20 @@
 	} 
 }
 
-
+.list-block .cc-list-item,
+.cc-list-item {
+	padding: 0;
+	margin-top: 45px;
+     
+	> li {
+		padding: 3px 0;
+		display: flex;
+        align-items: flex-start;
+		justify-content: space-between;
+        
+        font-size: rem(15);
+		> .name-item {
+			flex-shrink: 1;
+		}
+	}
+}

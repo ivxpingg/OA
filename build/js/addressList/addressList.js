@@ -5,7 +5,8 @@
 
  var addressList = {
  	 init: function(){
-         addressList.setEvent();
+         //addressList.setEvent();
+
  	 },
 
  	 setEvent: function(){

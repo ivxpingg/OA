@@ -2,4 +2,23 @@
   background-color: #efefef;
 }
 
+.modal-text .cc-list {
+  background-color: transparent;
+}
+.modal-text .cc-list > li {
+  padding: 3px 0;
+  text-align: left;
+  font-size: 15px;
+}
+
+.p-right {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.number-choices {
+  padding-right: 0.75rem;
+}
+
 /*# sourceMappingURL=applyList.css.map */

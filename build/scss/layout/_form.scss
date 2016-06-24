@@ -4,10 +4,16 @@
 
 	> ul > li{
 		border-bottom: 1px solid color(gray, gray-d9);
+		font-size: rem(15);
 	}
 
-	> ul li:first-child{
+	> ul > li:first-child{
 		border-top: 1px solid color(gray, gray-d9);
+	}
+
+	.item-inner:after{
+		display: none;
+		height: 0;
 	}
 
 	.item-title, 
@@ -40,3 +46,9 @@
 		height: auto;
 	}
 }
+
+
+//个人申请- 领用列表
+
+
+

@@ -23,9 +23,6 @@
 
 
 
-.content{
-	background-color: color(gray, gray-bg);
-}
 
 .content-padded{
 	margin: 0;
@@ -61,4 +58,39 @@
         line-height: rem(18);
         color: color(gray, gray-77);
     }
+}
+
+
+
+//写邮件
+
+.list-block{
+    .item-input > .value {
+        padding-left: rem(5);
+        height: 100%;
+        white-space:nowrap;
+    }
+}
+
+
+//邮件详情
+
+.email-header{
+       position: relative;
+       padding: rem(8) rem(15) rem(10);
+       background-color: #fff;
+   .email-title{       
+        font-size: rem(18);        
+    }   
+    
+    > .btn-link {
+        position: absolute;
+        right: rem(15);
+        bottom: rem(0);
+    } 
+}
+
+.email-content{
+    padding: rem(15);
+    font-size: rem(16);
 }

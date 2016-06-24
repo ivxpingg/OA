@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!---->
+<html land="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <!--确保-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">   
+	<title>邮件详情</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../dist/img/cc_ico.png" type="image/x-icon" />
+	<!-- sui-mobile -->
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
+    <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../../dist/css/oa.css">
+    
+
+</head>
+<body>
+    
+    <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <!-- 单个page ,第一个.page默认被展示-->
+        <div class="page page-current" id="emailDetail">
+            <link rel="stylesheet" href="../../dist/css/email/emails.css">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">邮件详情</h1>
+            </header>
+
+            <!-- 工具栏 -->
+
+            <!-- 这里是页面内容区 -->
+            <div class="content content-bg">               
+                
+                <div class="email-header">
+                	<div class="email-title">20160306更新: 长潮企业邮箱分组地址说明/长潮股份通讯录</div>
+                	<a class="btn-link" id="btnSwitch">详情</a>
+                </div>
+                <div class="list-block cc-form" id="info_panel" style="display: none;">
+                	<ul>
+                	    <li class="item-content">
+                	    	<div class="item-inner">
+                	    		<div class="item-title label">发件人:</div>
+                	    		<div class="item-input"><div class="value">林诗雨</br>lsy@fjcckj.com</div></div>
+                	    	</div>
+                	    </li>  
+                	    <li class="item-content">
+                	    	<div class="item-inner">
+                	    		<div class="item-title label">收件人:</div>
+                	    		<div class="item-input"><div class="value">林诗雨</br>lsy@fjcckj.com</br>林诗雨</br>lsy@fjcckj.com</div></div>
+                	    	</div>
+                	    </li>  
+                	    <li class="item-content">
+                	    	<div class="item-inner">
+                	    		<div class="item-title label">时间:</div>
+                	    		<div class="item-input"><div class="value">2016-06-23 00:00:00</div></div>
+                	    	</div>
+                	    </li>               	    
+                    </ul>
+                </div>
+
+                <div class="email-content">
+                	各位同事: </br>
+						    2016年2月份具体考勤汇总，请查收附件，有疑问的请在明天（3月3日）10:00前联系人事行政部林明美。
+						人事行政部</br>
+						2016年2月2日
+                </div>
+
+            </div>
+        </div>    
+        
+    </div>
+
+    
+
+
+    <!-- popup, panel 等放在这里 -->
+    <div class="panel-overlay"></div>
+   
+
+
+    
+    <script type='text/javascript' src='../../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../dist/js/app.js'></script>
+</body>
+</html>

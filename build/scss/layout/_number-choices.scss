@@ -1,0 +1,23 @@
+//数量选择
+
+.number-choices {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	> .minus, .plus {
+	    padding: 0 10px;
+	    font-family: "宋体";
+	    font-size: 30px;
+	    color: color(gray, gray-88);
+	}
+
+	> .value {
+		padding: 0 10px;
+        min-width: 40px;
+        text-align: center;
+        border: 1px solid color(cyan);
+	}
+
+	> .plus {
+	}
+}

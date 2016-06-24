@@ -21,7 +21,7 @@
     <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
     <div class="page-group">
         <!-- 单个page ,第一个.page默认被展示-->
-        <div class="page page-current" id="meetingApply">
+        <div class="page page-current" id="carUpkeep">
             <link rel="stylesheet" href="../../dist/css/apply/applyList.css">
             <!-- 标题栏 -->
             <header class="bar bar-nav">
@@ -49,8 +49,8 @@
                              <option>闽DBW659(天语商务车)</option>
                              <option>闽D93H71(五菱面包车)</option>
                            </select>
-                           <span class="btn btn-link">使用情况</span>
                         </div>
+                        <div class="button btn-form-size btn-cyan" onclick="carUpkeep.carDetail();">使用情况</div>
                       </div>
                     </div>
                   </li>
@@ -156,7 +156,6 @@
     <script type='text/javascript' src='../../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
-    <script type='text/javascript' src='../../dist/js/oa.js'></script>
-    <script type='text/javascript' src='../../dist/js/apply/meetingApply.js'></script>
+    <script type='text/javascript' src='../../dist/js/app.js'></script>
 </body>
 </html>

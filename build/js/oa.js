@@ -36,6 +36,11 @@
     	 sendEmails.init();
     });
 
+    //邮件详情
+    $(document).on("pageInit","#emailDetail", function(e, pageId, $page){
+    	 emailDetail.init();
+    });
+
 
 
     //流程审批
@@ -90,12 +95,48 @@
     	 workPlan.init();
     });
 
-    //个人申请
+    //#region 个人申请
     $(document).on("pageInit","#applyList", function(e, pageId, $page){
     	 applyList.init();
     });
 
-    
+        //会议申请
+        $(document).on("pageInit","#meetingApply", function(e, pageId, $page){
+	    	 meetingApply.init();
+	    });
+
+        //用车申请
+        $(document).on("pageInit","#carApply", function(e, pageId, $page){
+	    	 carApply.init();
+	    });
+
+        //车辆维护
+        $(document).on("pageInit","#carUpkeep", function(e, pageId, $page){
+	    	 carUpkeep.init();
+	    });
+
+	    //固定资产领用
+        $(document).on("pageInit","#fixedTake", function(e, pageId, $page){
+	    	 fixedTake.init();
+	    });
+
+	    //配件领用
+        $(document).on("pageInit","#accessoryTake", function(e, pageId, $page){
+	    	 accessoryTake.init();
+	    });
+
+	    //易耗品领用
+        $(document).on("pageInit","#consumableTake", function(e, pageId, $page){
+	    	 consumableTake.init();
+	    });
+
+
+    //#endregion 个人申请
+
+    //写邮件
+    $(document).on("pageInit","#email", function(e, pageId, $page){
+    	 email.init();
+    });
 
     //用户中心
     $(document).on("pageInit","#userCenter", function(e, pageId, $page){
