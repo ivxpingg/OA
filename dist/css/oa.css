@@ -65,6 +65,12 @@
   color: #424446;
 }
 
+.bar .btn-link-white,
+.btn-link-white {
+  font-size: 0.7rem;
+  color: #fff;
+}
+
 .btn-flat {
   border-radius: 0;
   box-shadow: none;
@@ -151,6 +157,11 @@
   font-size: 0.6rem;
   line-height: normal;
   height: auto;
+}
+
+.cc-form [type="checkbox"] {
+  width: 20px;
+  height: 20px;
 }
 
 .bar-nav {
@@ -2549,6 +2560,26 @@
   top: 33.33333333%;
   right: 0;
   height: 33.33333333%;
+}
+
+.cc-list > li.checkboxs {
+  position: relative;
+}
+.cc-list > li.checkboxs > .chb {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+}
+.cc-list > li.checkboxs > .cc-box {
+  margin-left: 25px;
+}
+.cc-list > li.checkboxs .sub-chb {
+  float: right;
+  margin-top: 15px;
+  width: 20px;
+  height: 20px;
 }
 
 .cc-list > li > .cc-box > .value-lg {

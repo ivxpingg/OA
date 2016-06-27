@@ -47,6 +47,9 @@ com = {
         $.router.load(id, ignoreCache);
 
     },
+    routerBack: function(){
+        $.router.back();
+    },
     
     //判断是否是数组
     isArray: Array.isArray,
@@ -162,7 +165,7 @@ utils.numberChoices = function(){
 	
     $(".number-choices>.minus").off("click").on( "click", function(){
         var value = +$(this).next(".value").html();
-        if( value > 1 ) {
+        if( value > 0 ) {
             $(this).next(".value").empty().append(--value);
         }
         
@@ -172,7 +175,11 @@ utils.numberChoices = function(){
         var value = +$(this).prev(".value").html();
         $(this).prev(".value").empty().append(++value);
     });
-};//依赖utils.extend.js
+};// 依赖
+// utils.extend.js
+// Zepto.js | jQuery.js
+// 2016-06-22  sgj
+
 
 (function(exports, module, define) {
   "use strict";
@@ -201,7 +208,16 @@ utils.numberChoices = function(){
         //获取选中数据
         getCheckedData: function(){
         	var p = this.options,
-                _s = this;
+                _s = this,
+                nodes,
+                data = [];
+
+            nodes = document.querysSelector(p.target).querySelectorAll(".sub-chb");
+
+            nodes.forEach(function(){
+                data.push($(this.parentNode).data("data"));
+            });
+
         }
     };
 
@@ -286,11 +302,17 @@ utils.numberChoices = function(){
 
             dom_li = document.createElement("li");
 
-            if( p.checked ) {
+            if( p.checkbox ) {
                 var dom_checked = document.createElement("input");
                 dom_checked.type = "checkbox";
                 dom_checked.id = item[p.id];
-                dom_li.appendChild(dom_checked);
+                dom_checked.className = "chb";
+                dom_checked.name = "treeNodeLv1";
+                
+                $(dom_checked).data("data", item);
+
+                dom_li.appendChild(dom_checked);                
+                dom_li.className = "checkboxs"; 
 
             }
 
@@ -332,11 +354,15 @@ utils.numberChoices = function(){
 
                 dom_div.innerHTML = "<div class='value pad-tb-4 mg-t-6'>"+ item[value][p.name] +"</div>";
                 
-                if( p.checked ) {
-                    var dom_checked = document.createElement("input");
-                    dom_checked.type = "checkbox";
-                    dom_checked.id = item[value][p.id];
-                    dom_div.appendChild(dom_checked);
+                if( p.checkbox ) {
+                    var dom_checkeds = document.createElement("input");
+                    dom_checkeds.type = "checkbox";
+                    dom_checkeds.id = item[value][p.id];
+                    dom_checkeds.name = "treeNodeLv2";                  
+                    dom_checkeds.className = "sub-chb";
+                    $(dom_div).data("data",item[value]);   //不知道为什么数据放在 dom_checkeds 对象一直获取不到，所以把数据存放在父节点
+
+                    dom_div.appendChild(dom_checkeds);
                 }
 
                 for(var key in p.list){
@@ -401,13 +427,62 @@ utils.numberChoices = function(){
 
             });
         },
-
+        
+        //选择事件设置
         checkbox: function(){
-            var p = this.options, _s = this;
-
+            var p = this.options, _s = this,
+                pNodes, subNodes;
+            
             if( !p.checkbox ) return;
 
+            var treeDom = document.querySelector(p.target);
 
+            pNodes = treeDom.querySelectorAll(".chb");
+            subNodes = treeDom.querySelectorAll(".sub-chb");
+            
+            pNodes.forEach(function(n){
+                n.addEventListener("change", function(){
+                    if(this.checked) {                        
+                        this.parentNode.querySelectorAll(".sub-chb").forEach(function(sub){
+                             sub.checked = true;
+                        });
+                    } else {
+                        this.parentNode.querySelectorAll(".sub-chb").forEach(function(sub){
+                             sub.checked = false;
+                        });
+                    }
+
+                },false);
+            });
+
+            subNodes.forEach(function(n) {
+                n.addEventListener("change", function(){
+                    if(this.checked) {                        
+                        this.parentNode.parentNode.parentNode.parentNode.previousSibling.previousSibling.checked = true;
+                    } else {
+                        
+                    }
+                }, false);
+
+
+            });
+
+        },
+
+        //获取选中数据
+        getCheckedData: function(){
+            var p = this.options,
+                _s = this,
+                nodes,
+                data = [];
+
+            nodes = document.querySelector(p.target).querySelectorAll(".sub-chb");
+
+            nodes.forEach(function(n){
+                if(n.checked)  data.push($(n.parentNode).data("data"));
+            });
+
+            return data;
         }
 
     	
@@ -473,53 +548,78 @@ utils.extend(utils, {
  */
 
  var addressList = {
- 	 init: function(){
-         //addressList.setEvent();
+ 	domTree: null,   //存储通讯录对象
+ 	init: function(){
+        addressList.addressList();
+         
+ 	},
+ 	 // 初始化通讯录
+    addressList: function() {
+		 addressList.domTree = tree({
+			target: "#listAddress",   //通讯录在页面的节点， 必须是id
+			//通讯录数据 暂不支持按需加载
+		    data: [{
+		        id: '1',
+		        item: [{
+		            face:"/cos/styles/mobile/images/user_male.png",
+		            id:10000003730292,
+		            isCharge:1,
+		            name:"甘志强(在线)",
+		            online:1,
+		            orgpathname:"/长潮科技",
+		            sex:"1"
+		        },{
+		            face:"/cos/styles/mobile/images/user_male.png",
+		            id:10000003730293,
+		            isCharge:1,
+		            name:"甘志强(在线2)",
+		            online:1,
+		            orgpathname:"/长潮科技",
+		            sex:"1"
+		        }],
+		        name: "长潮科技",
+		        nums: 2
+		    },{
+		        id: '1',
+		        item: [],
+		        name: "长潮科技/工程中心",
+		        nums: 2
+		    }],
+		    id: "id",          //节点标识符
+		    //checkbox: false,    //是否有选择框
+		    name: "name",      //节点展示的属性
+		    children: "item",  //第二层数据对应属性
+		    list: {            //自定义第二层要展示的数据
+		      id: "id",
+		      name: "名字",
+		      online: "名字",
+		      orgpathname: "名字"
+		   }
+		});
 
- 	 },
+    }
 
- 	 setEvent: function(){
- 	 	$('#listAddress>li>.cc-box').click(function(){
-	                
-	        var $box =  $(this).next('.box-body');
-	        var $img = $(this).find('.goto-img');
-
-	        if($(this).hasClass('active')){
-	        	$(this).removeClass('active');
-
-	            $img.animate({
-	                  rotateZ: '0deg'
-	            });
-
-	        	$box.animate({
-	        		height: 0
-	        	},function(){
-	        		$box.addClass('hide');
-	        	});
-	        }
-	        else{        	
-	            $(this).addClass('active');
-	            $box.removeClass('hide');
-	        	var height = $($box).find('ul').height() + 1;
-	        	$box.removeClass('hide');
-	            
-	            $img.animate({
-	                  rotateZ: '90deg'
-	            });
-
-	        	$box.animate({
-	        		height: height
-	        	});
-	        }
-
-	    });
- 	 }
  };;/*
 * 配件领用
 */
 var accessoryTake = {
     init: function(){
-       utils.numberChoices();  // 页面配件加载完执行
+        accessoryTake.buildData();
+    },
+
+    //页面配件数据
+    buildData: function(){
+         
+        /* doSomething */ 
+
+        utils.numberChoices();  // 页面配件加载完执行
+    },
+    //选择配件，并返回
+    ok: function(){
+        
+        /* doSomething */ 
+        
+        utils.routerBack();  //返回
     }
 };
 /*
@@ -987,15 +1087,16 @@ var signCard = {
 */
 
 var email = {
-	domTree: null,
+	domTree: null,   //存储通讯录对象
 	init: function(){
          email.addressList();		
 	},
-
+    // 初始化通讯录
     addressList: function() {
         if(!email.domTree) {
              email.domTree = tree({
-				target: "#listAddress",
+				target: "#listAddress",   //通讯录在页面的节点， 必须是id
+				//通讯录数据 暂不支持按需加载
 	            data: [{
 	                id: '1',
 	                item: [{
@@ -1023,11 +1124,11 @@ var email = {
 	                name: "长潮科技/工程中心",
 	                nums: 2
 	            }],
-	            id: "id",
-	            checkbox: true,
-	            name: "name",
-	            children: "item",
-	            list: {
+	            id: "id",          //节点标识符
+	            checkbox: true,    //是否有选择框 默认 false
+	            name: "name",      //节点展示的属性
+	            children: "item",  //第二层数据对应属性
+	            list: {            //自定义第二层要展示的数据
 	              id: "id",
 	              name: "名字",
 	              online: "名字",
@@ -1036,7 +1137,25 @@ var email = {
 			});
         }
 
+    },
+    //获取选中的通讯录人员并返回
+    ok: function() {
+    	var value = "",  
+    	    reVal = email.domTree.getCheckedData(), //获取通讯录选中的数据
+    	    n;
+
+    	for( n in reVal) {
+            value += reVal[n].name + ",";
+    	}
+
+    	value = value.substring(0, value.length);    	
+
+    	$("#sender").val(value);
+
+    	utils.routerBack();
+    	//utils.routerLoad("#email");
     }
+
 };;/*
 *  邮件详情
 */
@@ -1066,6 +1185,11 @@ var emailDetail = {
 var readEmails = {
 	init: function(){
 		
+	},
+
+	//
+	detail: function( url ){
+		utils.routerLoad(url);
 	}
 };;/*
 *  已发送邮件
@@ -1074,6 +1198,10 @@ var readEmails = {
 var sendEmails = {
 	init: function(){
 		
+	},
+
+	detail: function( url ){
+		utils.routerLoad(url);
 	}
 };;/*
 *  未读邮件
@@ -1082,6 +1210,9 @@ var sendEmails = {
 var unreadEmails = {
 	init: function(){
 		
+	},
+	detail: function( url ){
+		utils.routerLoad(url);
 	}
 };;
 /*
@@ -1106,7 +1237,38 @@ var userCenter = {
 	signOut: function(){
 
 		//window.location.href = ""
-        utils.routerLoad("../login.html", true);//忽略缓存
+        utils.routerLoad( com.root + "../login.html", true);//忽略缓存
+	},
+     
+    //修改密码
+	modifyPwd: function(){
+        var constraints = {
+	        oldPassword: {
+	            presence: true
+	        },
+	        ePassword1: {
+	            presence: true,
+	            length: {
+	                minimum: 6,
+	                maximum: 20
+	            }
+	        },
+	        ePassword2: {
+	            presence: true,
+	            equality: {
+	                attribute: "ePassword1",
+	                message: "^2个密码不相等"
+	            }
+	        }
+
+	    }
+        
+        if( utils.validate('#editPwd', constraints) ){
+           var formValues = utils.collectFormValues('#editPwd');
+	       console.log(formValues);
+	       utils.routerLoad(com.root + "../login.html", true);
+	    }
+
 	}
 };;/*
 * 工作计划

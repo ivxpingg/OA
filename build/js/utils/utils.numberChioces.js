@@ -9,7 +9,7 @@ utils.numberChoices = function(){
 	
     $(".number-choices>.minus").off("click").on( "click", function(){
         var value = +$(this).next(".value").html();
-        if( value > 1 ) {
+        if( value > 0 ) {
             $(this).next(".value").empty().append(--value);
         }
         

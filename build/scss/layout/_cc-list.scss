@@ -61,6 +61,31 @@
 
 }
 
+//checkbox 
+.cc-list{
+	> li.checkboxs{
+		position: relative;
+		> .chb{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 20px;
+            height: 20px;
+		}
+
+		>.cc-box {
+			margin-left: 25px;
+		}
+
+		.sub-chb {
+			float: right;
+            margin-top: 15px;
+            width: 20px;
+            height: 20px;
+		}
+	}
+}
+
 
 .cc-list{
 	> li > .cc-box > .value-lg{

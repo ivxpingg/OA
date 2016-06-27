@@ -5,5 +5,9 @@
 var sendEmails = {
 	init: function(){
 		
+	},
+
+	detail: function( url ){
+		utils.routerLoad(url);
 	}
 };

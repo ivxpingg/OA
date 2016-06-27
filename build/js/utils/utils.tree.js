@@ -1,4 +1,8 @@
-//依赖utils.extend.js
+// 依赖
+// utils.extend.js
+// Zepto.js | jQuery.js
+// 2016-06-22  sgj
+
 
 (function(exports, module, define) {
   "use strict";
@@ -27,7 +31,16 @@
         //获取选中数据
         getCheckedData: function(){
         	var p = this.options,
-                _s = this;
+                _s = this,
+                nodes,
+                data = [];
+
+            nodes = document.querysSelector(p.target).querySelectorAll(".sub-chb");
+
+            nodes.forEach(function(){
+                data.push($(this.parentNode).data("data"));
+            });
+
         }
     };
 
@@ -112,11 +125,17 @@
 
             dom_li = document.createElement("li");
 
-            if( p.checked ) {
+            if( p.checkbox ) {
                 var dom_checked = document.createElement("input");
                 dom_checked.type = "checkbox";
                 dom_checked.id = item[p.id];
-                dom_li.appendChild(dom_checked);
+                dom_checked.className = "chb";
+                dom_checked.name = "treeNodeLv1";
+                
+                $(dom_checked).data("data", item);
+
+                dom_li.appendChild(dom_checked);                
+                dom_li.className = "checkboxs"; 
 
             }
 
@@ -158,11 +177,15 @@
 
                 dom_div.innerHTML = "<div class='value pad-tb-4 mg-t-6'>"+ item[value][p.name] +"</div>";
                 
-                if( p.checked ) {
-                    var dom_checked = document.createElement("input");
-                    dom_checked.type = "checkbox";
-                    dom_checked.id = item[value][p.id];
-                    dom_div.appendChild(dom_checked);
+                if( p.checkbox ) {
+                    var dom_checkeds = document.createElement("input");
+                    dom_checkeds.type = "checkbox";
+                    dom_checkeds.id = item[value][p.id];
+                    dom_checkeds.name = "treeNodeLv2";                  
+                    dom_checkeds.className = "sub-chb";
+                    $(dom_div).data("data",item[value]);   //不知道为什么数据放在 dom_checkeds 对象一直获取不到，所以把数据存放在父节点
+
+                    dom_div.appendChild(dom_checkeds);
                 }
 
                 for(var key in p.list){
@@ -227,13 +250,62 @@
 
             });
         },
-
+        
+        //选择事件设置
         checkbox: function(){
-            var p = this.options, _s = this;
-
+            var p = this.options, _s = this,
+                pNodes, subNodes;
+            
             if( !p.checkbox ) return;
 
+            var treeDom = document.querySelector(p.target);
 
+            pNodes = treeDom.querySelectorAll(".chb");
+            subNodes = treeDom.querySelectorAll(".sub-chb");
+            
+            pNodes.forEach(function(n){
+                n.addEventListener("change", function(){
+                    if(this.checked) {                        
+                        this.parentNode.querySelectorAll(".sub-chb").forEach(function(sub){
+                             sub.checked = true;
+                        });
+                    } else {
+                        this.parentNode.querySelectorAll(".sub-chb").forEach(function(sub){
+                             sub.checked = false;
+                        });
+                    }
+
+                },false);
+            });
+
+            subNodes.forEach(function(n) {
+                n.addEventListener("change", function(){
+                    if(this.checked) {                        
+                        this.parentNode.parentNode.parentNode.parentNode.previousSibling.previousSibling.checked = true;
+                    } else {
+                        
+                    }
+                }, false);
+
+
+            });
+
+        },
+
+        //获取选中数据
+        getCheckedData: function(){
+            var p = this.options,
+                _s = this,
+                nodes,
+                data = [];
+
+            nodes = document.querySelector(p.target).querySelectorAll(".sub-chb");
+
+            nodes.forEach(function(n){
+                if(n.checked)  data.push($(n.parentNode).data("data"));
+            });
+
+            return data;
         }
 
     	

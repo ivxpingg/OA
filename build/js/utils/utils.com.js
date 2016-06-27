@@ -29,6 +29,9 @@ com = {
         $.router.load(id, ignoreCache);
 
     },
+    routerBack: function(){
+        $.router.back();
+    },
     
     //判断是否是数组
     isArray: Array.isArray,

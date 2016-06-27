@@ -32,6 +32,12 @@
     color: color(gray);
 }
 
+.bar .btn-link-white,
+.btn-link-white {
+    font-size: rem(14);
+    color: #fff;
+}
+
 //按钮不要圆角
 .btn-flat {
     border-radius: 0;

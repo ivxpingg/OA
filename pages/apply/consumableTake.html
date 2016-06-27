@@ -119,6 +119,7 @@
             <!-- 标题栏 -->
             <header class="bar bar-nav">
                 <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <button class="button button-link btn-link-white pull-right" onclick="consumableTake.ok();">确定</button>
                 <h1 class="title">易耗品</h1>
             </header>
 
@@ -163,13 +164,6 @@
                          </li>
                      </ul>
                  </div>
-
-                 <div class="content-block btn-panel">
-                    <div class="row">
-                      <div class="col-50"><a href="#" class="button button-big btn-flat btn-cyan back">取消</a></div>
-                      <div class="col-50"><a href="#" class="button button-big btn-flat btn-cyan-o" onclick="consumableTake.se();">提交</a></div>
-                    </div>
-                  </div>
             </div><!-- /.易耗品选择 -->
 
         </div>  
@@ -186,6 +180,9 @@
     <script type='text/javascript' src='../../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/calendar/zepto.mdater.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/moment/moment.js'></script>
+    <script type='text/javascript' src='../../plugins/validate/validate.js'></script>
     <script type='text/javascript' src='../../dist/js/app.js'></script>
 </body>
 </html>

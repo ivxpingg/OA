@@ -26,21 +26,21 @@
             <!-- 标题栏 -->
             <header class="bar bar-nav">
                 <h1 class="title">写邮件</h1>
-                <button class="button button-link pull-left">取消</button>
-                <button class="button button-link pull-right">发送</button>
+                <!-- <button class="button button-link pull-left">取消</button> -->
+                <button class="button button-link btn-link-white pull-right">发送</button>
             </header>
 
             <!-- 工具栏 -->
             <nav class="bar bar-tab">
-                <a class="tab-item" href="home.html">
+                <a class="tab-item external" href="home.html">
                     <span class="icon cc-icon cc-home"></span>
                     <span class="tab-label">个人应用</span>
                 </a>
-                <a class="tab-item active" href="#">
+                <a class="tab-item external active" href="#">
                     <span class="icon cc-icon cc-mail"></span>
                     <span class="tab-label">写邮件</span>
                 </a>
-                <a class="tab-item" href="userCenter.html">
+                <a class="tab-item external" href="userCenter.html">
                    <span class="icon cc-icon cc-user-center"></span>
                     <span class="tab-label">个人中心</span>
                 </a>
@@ -54,7 +54,7 @@
                             <div class="item-content">
                                 <div class="item-inner">    
                                     <div class="item-title label">收件人:</div>
-                                    <div class="item-input"><input type="text" value="lsy@fjcckj.com、lsy@fjcckj.com"></div>
+                                    <div class="item-input"><input id="sender" type="text" value="lsy@fjcckj.com、lsy@fjcckj.com"></div>
                                     <a class="icon p-right btn-add-img" onclick="utils.routerLoad('#emailListAddress')"><img src="../../dist/img/add-cyan-icon.png" alt=""></a>
                                 </div>
                             </div>
@@ -94,6 +94,7 @@
             <!-- 标题栏 -->
             <header class="bar bar-nav">
                 <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <button class="button button-link btn-link-white pull-right" onclick="email.ok()">确定</button>
                 <h1 class="title">通讯录</h1>
             </header>
 
@@ -119,7 +120,9 @@
     <script type='text/javascript' src='../../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
-
+    <script type='text/javascript' src='../../plugins/calendar/zepto.mdater.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/moment/moment.js'></script>
+    <script type='text/javascript' src='../../plugins/validate/validate.js'></script>
     <script type='text/javascript' src='../../dist/js/app.js'></script>
 </body>
 </html>

@@ -29,15 +29,15 @@
 
             <!-- 工具栏 -->
             <nav class="bar bar-tab">
-                <a class="tab-item" href="home.html">
+                <a class="tab-item external" href="home.html">
                     <span class="icon cc-icon cc-home"></span>
                     <span class="tab-label">个人应用</span>
                 </a>
-                <a class="tab-item" href="mail.html">
+                <a class="tab-item external" href="mail.html">
                     <span class="icon cc-icon cc-mail"></span>
                     <span class="tab-label">写邮件</span>
                 </a>
-                <a class="tab-item active" href="#">
+                <a class="tab-item external active" href="#">
                     <span class="icon cc-icon cc-user-center"></span>
                     <span class="tab-label">个人中心</span>
                 </a>
@@ -144,7 +144,7 @@
                         </ul>
                      </div>
 
-                     <a href="#" class="button button-big btn-cyan" onclick="modifyPwd('#userCenter')">完成</a>
+                     <a href="#" class="button button-big btn-cyan" onclick="userCenter.modifyPwd('#userCenter')">完成</a>
                  </div>
 
             </div>
@@ -161,8 +161,9 @@
     <script type='text/javascript' src='../../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/calendar/zepto.mdater.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../plugins/moment/moment.js'></script>
     <script type='text/javascript' src='../../plugins/validate/validate.js'></script>
-
     <script type='text/javascript' src='../../dist/js/app.js'></script>
 </body>
 </html>
