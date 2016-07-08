@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <!---->
 <html land="zh_CN">
+
 <head>
     <meta charset="utf-8">
     <!--确保-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>流程审批</title>
     <!-- icon -->
     <link rel="shortcut icon" href="../../dist/img/cc_ico.png" type="image/x-icon" />
@@ -13,11 +14,12 @@
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm.min.css">
     <link rel="stylesheet" href="../../plugins/suiMobile/dist/css/sm-extend.min.css">
     <link rel="stylesheet" href="../../dist/css/oa.css">
-    
+
 
 </head>
+
 <body>
-    
+
     <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
     <div class="page-group">
         <!-- 单个page ,第一个.page默认被展示-->
@@ -39,12 +41,13 @@
                         <li class="active" role="list_approvaled" group=""><a>待我审批</a></li>
                         <li role="list_my_apply"><a>我的申请</a></li>
                     </ul>
-                </div><!-- /.导航栏 -->
+                </div>
+                <!-- /.导航栏 -->
 
-                <!-- 内容列表 -->                
+                <!-- 内容列表 -->
                 <ul class="cc-list cc-list-border" id="list_approvaled">
                     <li>
-                        <a class="cc-box" href="#" onclick="utils.routerLoad('id');">
+                        <a class="cc-box" href="#" onclick="process.approveInfo('id','#process_my_approve');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span><img src="../../dist/img/user-icon.png" alt="">申请人:<span>宗斌</span></span>
@@ -54,7 +57,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#"  onclick="utils.routerLoad('id');">
+                        <a class="cc-box" href="#" onclick="process.approveInfo('id','#process_my_approve');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span><img src="../../dist/img/user-icon.png" alt="">申请人:<span>宗斌</span></span>
@@ -64,7 +67,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#" onclick="utils.routerLoad('id');">
+                        <a class="cc-box" href="#" onclick="process.approveInfo('id','#process_my_approve');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span><img src="../../dist/img/user-icon.png" alt="">申请人:<span>宗斌</span></span>
@@ -74,7 +77,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="cc-box" href="#" onclick="utils.routerLoad('id');">
+                        <a class="cc-box" href="#" onclick="process.approveInfo('id','#process_my_approve');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span><img src="../../dist/img/user-icon.png" alt="">申请人:<span>宗斌</span></span>
@@ -87,31 +90,139 @@
 
                 <ul class="cc-list cc-list-border hide" id="list_my_apply">
                     <li>
-                        <a class="cc-box" href="#"  onclick="utils.routerLoad('id');">
+                        <a class="cc-box" href="#" onclick="process.applyInfo('id','#process_my_apply');">
                             <span class="value pad-tb-10 value-lg">易乘蹭开发进展及其他工作进度安排</span>
                             <div class="sub-value pad-tb-3">
                                 <span><img src="../../dist/img/user-icon.png" alt="">申请人:<span>宗斌</span></span>
                                 <span><img src="../../dist/img/time-icon.png" alt="">时间: <span>1天</span></span>
                             </div>
+                            <img class="goto-img" src="../../dist/img/goto-right.png" alt="">
                         </a>
                     </li>
                 </ul>
 
 
-                <!-- /.内容列表 -->   
+                <!-- /.内容列表 -->
 
             </div>
-        </div>   
+        </div>
 
+        <div class="page" id="process_my_approve">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">外派申请</h1>
+            </header>
+            <!-- /.标题栏 -->
+            <!-- 内容列表 -->
+            <ul class="cc-list cc-list-border" id="list_work">
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">申请人:<span>战三</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">申请部门:<span>软件部</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">开始时间:<span class="font-color-red">2016-03-20</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">结束时间:<span class="font-color-red">2016-03-20</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">外派天数:<span class="font-color-green">1天</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">外派事由:<span>外派</span></span>
+                    </a>
+                </li>
 
+            </ul>
+            <!-- /.内容列表 -->
+            <div class="content-block btn-panel">
+                <div class="row">
+                    <div class="col-50"><a href="#" class="button button-big btn-flat btn-cyan" onclick="process.agree();">同意</a></div>
+                    <div class="col-50"><a href="#" class="button button-big btn-flat btn-cyan-o" onclick="process.disagree();">不同意</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="process_my_apply">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <a class="icon pull-left back" href="#"><span class="icon icon-left"></span></a>
+                <h1 class="title">未完成</h1>
+            </header>
+            <!-- /.标题栏 -->
+            <!-- 内容列表 -->
+            <ul class="cc-list cc-list-border" id="list_work">
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">标题:<span>易乘蹭开发进展及其他工作进度安排</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">负责人:<span>林静秋</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">参与人:<span class="font-color-blue">软件部</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">开始时间:<span class="font-color-red">2016-03-20</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">结束时间:<span class="font-color-red">2016-03-20</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">计划状态:<span class="font-color-green">未完成</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value  pad-tb-11">附件:<span>dd</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">内容:<span>易乘蹭开发进展及其他工作进度安排</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="cc-box" href="#">
+                        <span class="value pad-tb-11">备注:<span>会议计划</span></span>
+                    </a>
+                </li>
+
+            </ul>
+            <!-- /.内容列表 -->
+        </div>
     </div>
 
     <!-- popup, panel 等放在这里 -->
     <div class="panel-overlay"></div>
-   
 
 
-    
+
+
     <script type='text/javascript' src='../../plugins/zepto-full/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../plugins/suiMobile/dist/js/sm-extend.min.js' charset='utf-8'></script>
@@ -120,4 +231,5 @@
     <script type='text/javascript' src='../../plugins/validate/validate.js'></script>
     <script type='text/javascript' src='../../dist/js/app.js'></script>
 </body>
+
 </html>

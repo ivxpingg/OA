@@ -1,5 +1,5 @@
 function login() {
-    //#region 表单验证 
+    //#region 表单验证
     var constraints = {
         userName: {
             // 必须的
@@ -47,10 +47,10 @@ function editPwd(pageId) {
     //var attribute = document.querySelector("#formTelephone");
     utils.validate('formTelephone', constraints);
     //var error = utils.validate('formTelephone', constraints, false); //不提示错误
-    
+
     var formValues = utils.collectFormValues('formTelephone');
      console.log(formValues);
-  
+
     $.router.load(pageId);
 };
 
@@ -91,7 +91,7 @@ function modifyPwd(pageId) {
 
 
 
-    // 默认必须要执行$.init(),实际业务里一般不会在HTML文档里执行，通常是在业务页面代码的最后执行 
+    // 默认必须要执行$.init(),实际业务里一般不会在HTML文档里执行，通常是在业务页面代码的最后执行
     $.init();
 
 })();

@@ -142,9 +142,11 @@ utils.menu = function(){
 
         var role = $(this).attr("role");
 
+        if( $("#" + role).length == 0 ) return;  // 找不到菜单对象则不执行
+
         var li_current = $(this).parent().find('li.active');
-        if(li_current){
-        	var role_current = $(li_current).attr('role');
+        if(li_current){            
+        	var role_current = $(li_current).attr('role');  
         	$(this).parent().find('li').removeClass('active');
         	$("#" + role_current).addClass('hide');
         }
@@ -1348,6 +1350,58 @@ var login = {
 	}
 
 };;
+/*
+* 审批流程
+*/
+var process = {
+  init: function() {
+    process.menuInit();
+  },
+
+  //菜单初始化
+  menuInit: function() {
+    utils.menu();
+  },
+
+  //查看待我审批任务详情
+  approveInfo: function(id, domId) {
+    utils.routerLoad(domId);
+  },
+
+  //查看我的审批任务详情
+  applyInfo: function(id, domId) {
+    utils.routerLoad(domId);
+  },
+
+  // 同意审批
+  agree: function() {},
+
+  //不同意审批
+  disagree: function() {}
+
+
+};
+;/*
+* 通知公告
+*/
+
+var publicNotion = {
+	init: function(){
+		
+	}
+};;/*
+* 工作计划
+*/
+
+var workPlan = {
+  init: function() {
+    utils.menu();
+  },
+
+  newOk: function() {}
+
+};
+;
 (function(){
 	$.config = {
 	    autoInit: false,                //在 document.onload 之后自动调用 $.init 方法。如果你的页面内容是异步加载的，应该关闭这个配置，并且在加载完成之后手动调用 $.init
@@ -1500,36 +1554,5 @@ var login = {
 
 })();
 
-;
-/*
-* 审批流程
-*/
-var process = {
-	init: function(){
-         process.menuInit();
-	},
 
-    menuInit: function(){
-       utils.menu();
-    }
-
-
-};;/*
-* 通知公告
-*/
-
-var publicNotion = {
-	init: function(){
-		
-	}
-};;/*
-* 工作计划
-*/
-
-var workPlan = {
-	init: function(){
-        utils.menu();
-	}
-
-};
 //# sourceMappingURL=app.js.map
